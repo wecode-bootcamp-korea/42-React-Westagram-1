@@ -13,7 +13,6 @@ import SuhyeonMain from "./pages/Suhyeon/Main/SuhyeonMain";
 import SuhyeonLogin from "./pages/Suhyeon/Login/SuhyeonLogin";
 
 
-
 function Router() {
     return (
         <BrowserRouter>
@@ -31,9 +30,6 @@ function Router() {
             <Route path="/suhyeon-login" element={<SuhyeonLogin/>} />
             <Route path="/suhyeon-main" element={<SuhyeonMain />}/>
 
-
-
-            
         </Routes>
         </BrowserRouter>
     );
