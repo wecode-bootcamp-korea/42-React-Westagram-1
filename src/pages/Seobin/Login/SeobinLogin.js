@@ -39,7 +39,7 @@ const Login = () => {
       >
         로그인
       </button>
-      <span>비밀번호를 잊으셨나요?</span>
+      <span>비밀번호를 잊으셨나요??</span>
       <Link to="/signup">회원가입</Link>
     </div>
   );
