@@ -23,6 +23,12 @@ function Container() {
     setInputPw(state);
   };
 
+  const isLoginOk = () => {
+    inputId.indexOf('@') >= 0 && inputPw.length >= 5
+      ? setBtnState(false)
+      : setBtnState(true);
+  };
+
   return (
     <div className="container">
       <input
@@ -36,6 +42,7 @@ function Container() {
         placeholder="비밀번호"
         className="userPw account"
         onChange={saveUserPw}
+        onKeyUp={isLoginOk}
       />
       <button id="btn" onClick={goToMain} disabled={btnState}>
         로그인
