@@ -1,0 +1,353 @@
+@mixin navIconSort {
+  width: 30px;
+  height: 30px;
+}
+
+@mixin ulSort {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin ProfilePicSort {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+} //이거 메인 시작하는거 위로 옮기기
+
+@mixin descriptionSort {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  padding: 20px 0;
+  position: fixed;
+
+  .nav1 {
+    display: flex;
+    height: 30px;
+
+    .logo {
+      @include navIconSort;
+      margin: 2px 10px;
+    }
+
+    .Westagram {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+      cursor: pointer;
+      color: black;
+      display: flex;
+      border-left: 1.5px solid black;
+      padding-left: 10px;
+    }
+  }
+
+  .inputSearch {
+    width: 270px;
+    height: 23px;
+    padding: 5px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/868/868282.png);
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: 38%center;
+    box-sizing: content-box;
+    text-align: center;
+    font-size: 15px;
+
+    &:focus::placeholder {
+      text-align: start;
+    }
+
+    &::placeholder {
+      &:not(:focus) {
+        font-weight: 200;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      text-align: start;
+      background-image: none;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+  .nav2 {
+    .listWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .searchIcon,
+    .heartIcon,
+    .myPageIcon {
+      width: 35px;
+      height: 35px;
+      padding-left: 20px;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+
+  header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border: 1px solid #dbdbdb;
+    align-items: center;
+
+    .profileOfArticle {
+      display: flex;
+      align-items: center;
+      .boldPoint {
+        font-size: 18px;
+      }
+
+      .mProfilePic {
+        @include ProfilePicSort;
+        margin-right: 15px;
+      }
+    }
+
+    .moreInfo {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+    }
+  }
+
+  .mainIMG {
+    width: 700px;
+    height: auto;
+    border: 1px solid #dbdbdb;
+  }
+  .feedIcons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 8px 15px;
+
+    ul {
+      display: flex;
+      .iconPress {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .reaction {
+    margin-left: 15px;
+    margin-bottom: 5px;
+
+    .likedPP {
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      .profilePicR {
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        border: 1px solid #dbdbdb;
+        margin-right: 7px;
+      }
+    }
+    .commentTime {
+      font-size: 17px;
+    }
+  }
+  .descriptopnText {
+    @include descriptionSort;
+  }
+  .commentSection {
+    padding-top: 5px;
+    //comments
+  }
+
+  .putComment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dbdbdb;
+    padding: 0 10px;
+
+    .inputComment {
+      border: none;
+      font-size: 16px;
+      width: 610px;
+
+      &:focus {
+        outline: none;
+      }
+      &:focus {
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+    .submitComment {
+      background-color: transparent;
+      color: #dbdbdb;
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+}
+
+.mainRight {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  .mainTopWrap {
+    display: flex;
+    align-items: center;
+  }
+}
+.subProfile {
+  width: 40px;
+}
+
+.storyList,
+.recommandSection {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainFeed {
+  width: 300px;
+  border: 1px solid #dbdbdb;
+}
+
+article,
+.storySection,
+.recommandSection {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+}
+
+.storySection,
+.recommandSection {
+  width: 300px;
+  overflow: hidden;
+}
+
+.mainFeed,
+.mainRight {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 800px;
+  margin: 0 20px 0 70px;
+  border: 1px solid #dbdbdb;
+}
+
+.ProfilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+}
+
+.myProfilePic2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+}
+
+.iconPress {
+  width: 30px;
+  height: 30px;
+}
+
+.likedPP {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comments {
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-between;
+
+  .commentHeart {
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: pink; //왜안됨?!?!?!?!!?!?
+    }
+  }
+  .commentContext {
+    margin-left: 10px;
+  }
+}
+
+.commentTime {
+  color: gray;
+}
+
+.StorySectionTop,
+.recommandSectionTop {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.storyList {
+  margin-left: 15px;
+  margin-top: -4px;
+}
+
+.westaScript,
+.subProfile {
+  font-size: 14px;
+  color: #afafaf;
+}
+
+.follow {
+  font-weight: 700;
+  color: #0995f6;
+}
+
+.storyTitle {
+  font-weight: 700;
+  color: #afafaf;
+}
+.storyMore {
+  font-weight: 700;
+}
+
+.westaScript {
+  width: 285px;
+}
