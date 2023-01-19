@@ -16,17 +16,17 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/hein-login" element={<HeinLogin />} />
-        <Route path="/hein-main" element={<HeinMain />} />
+        {/* <Route path="/hein-login" element={<HeinLogin />} />
+        <Route path="/hein-main" element={<HeinMain />} /> */}
 
         <Route path="/seobin-login" element={<SeobinLogin />} />
         <Route path="/seobin-main" element={<SeobinMain />} />
 
-        <Route path="/soomin-login" element={<SoominLogin />} />
+        {/* <Route path="/soomin-login" element={<SoominLogin />} />
         <Route path="/soomin-main" element={<SoominMain />} />
 
         <Route path="/suhyeon-login" element={<SuhyeonLogin />} />
-        <Route path="/suhyeon-main" element={<SuhyeonMain />} />
+        <Route path="/suhyeon-main" element={<SuhyeonMain />} /> */}
       </Routes>
     </BrowserRouter>
   );

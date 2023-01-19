@@ -1,0 +1,41 @@
+@import '../../../styles/mixin.scss';
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .box-id {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    border: 5px solid #efefef;
+    background-color: #efefef;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .box-pw {
+    width: 350px;
+    height: 70px;
+    border-radius: 5px;
+    border: 5px solid #efefef;
+    background-color: #efefef;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .loginBtn {
+    @include btn();
+    cursor: pointer;
+    background-color: blue;
+  }
+  .loginDisabled:disabled {
+    @include btn();
+    cursor: not-allowed;
+    background-color: #c4e1fb;
+  }
+
+  h1 {
+    font-family: 'Lobster', cursive;
+  }
+}

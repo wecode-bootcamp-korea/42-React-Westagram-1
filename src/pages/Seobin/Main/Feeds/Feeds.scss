@@ -1,0 +1,59 @@
+@import '../../../../styles/mixin.scss';
+@import '../../../../styles/variables.scss';
+.feeds {
+  padding: 150px;
+
+  .like {
+    display: flex;
+    flex-direction: column;
+
+    .feed-img {
+      width: 800px;
+    }
+    .circle {
+      @include circle(flex);
+    }
+    .profile-like {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.profile-box {
+  display: flex;
+  line-height: 5px;
+  .profile p {
+    font-size: 20px;
+  }
+  .profile span {
+    font-size: 15px;
+    color: gray;
+    font-weight: 700;
+  }
+}
+
+.icon-lower {
+  display: flex;
+  justify-content: space-between;
+  .heartColor {
+    color: tomato;
+  }
+}
+
+.bootcamp-described span:nth-child(1) {
+  font-weight: bold;
+}
+
+.addComment {
+  width: 70%;
+  height: 50px;
+  border: none;
+}
+
+.comment-button {
+  border: none;
+  width: 27%;
+  height: $middleSize;
+  border-radius: 20px;
+}
