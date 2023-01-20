@@ -1,0 +1,16 @@
+.soominMain {
+  .container-box {
+    display: flex;
+    justify-content: center;
+    padding: 60px 200px 0px 100px;
+
+    .logo-box {
+      display: none;
+    }
+
+    footer {
+      color: gray;
+      font-size: 12px;
+    }
+  }
+}

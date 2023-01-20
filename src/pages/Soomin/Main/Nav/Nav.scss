@@ -1,0 +1,62 @@
+.nav {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: #fff;
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      font-family: 'Lobster', cursive;
+
+      .logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+
+    .searchbar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+
+      .search::placeholder {
+        text-align: center;
+      }
+      .fa-magnifying-glass {
+        position: absolute;
+        left: 90px;
+        color: gray;
+      }
+
+      .search {
+        width: 240px;
+        height: 25px;
+        border: solid;
+        border-radius: 5px;
+        color: rgb(240, 240, 240);
+        background-color: #fff;
+      }
+    }
+
+    .notice {
+      .exploration {
+        width: 25px;
+        margin-right: 20px;
+      }
+
+      .heart {
+        width: 25px;
+        margin-right: 20px;
+      }
+
+      .mypage {
+        width: 21px;
+      }
+    }
+  }
+}

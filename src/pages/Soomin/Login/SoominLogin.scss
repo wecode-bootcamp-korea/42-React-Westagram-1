@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
+
+  .soominlogin {
+    width: 300px;
+    height: 370px;
+    text-align: center;
+    border: 1px solid #efefef;
+    background-color: #fff;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    .logo {
+      margin-top: 40px;
+      font-weight: 600;
+      font-family: 'Lobster', cursive;
+    }
+  }
+
+  main.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+
+    input {
+      border: 1px solid #efefef;
+      background-color: #f7f7f7;
+    }
+
+    .we-id {
+      width: 220px;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    .we-password {
+      width: 220px;
+      padding: 10px;
+      font-size: 11px;
+    }
+    button {
+      background: inherit;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      overflow: visible;
+      cursor: pointer;
+    }
+
+    .login-button {
+      width: 220px;
+      height: 30px;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: rgb(135, 206, 235);
+      border-radius: 3px;
+      font-size: 10px;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  footer {
+    margin-top: 60px;
+
+    .find-password {
+      text-decoration: none;
+      font-size: 10px;
+      color: navy;
+    }
+  }
+}

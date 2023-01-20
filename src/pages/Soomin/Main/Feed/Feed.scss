@@ -1,0 +1,134 @@
+.feed {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #b2b2b2;
+  background-color: #fff;
+
+  .from-wrapper {
+    margin: 5px;
+    list-style: none;
+
+    .profile-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .proflie-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px;
+    }
+
+    .user-proflie {
+      display: flex;
+      align-items: center;
+
+      .profile {
+        width: 30px;
+        height: 30px;
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .feed-photo1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .feed-icon {
+    display: flex;
+    margin: 10px;
+
+    .heart-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .comment-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .upload-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .feed-info {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 12px;
+
+    .follower-info {
+      display: flex;
+      align-items: center;
+
+      .follower-photo {
+        width: 20px;
+        height: 20px;
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .feed-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 12px;
+
+    .feed-contents {
+      display: flex;
+
+      .contents {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .comment-box {
+    display: flex;
+    margin-left: 10px;
+    font-size: 12px;
+
+    .comment-wrapper {
+      list-style: none;
+
+      .comment {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+
+        .contents {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .time {
+    margin-left: 10px;
+    font-size: 12px;
+    color: gray;
+  }
+
+  .comment-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 12px;
+  }
+}
