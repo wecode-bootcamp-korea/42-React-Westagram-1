@@ -16,7 +16,6 @@ const Feeds = () => {
     setCommentArray(result);
     setComment('');
   };
-
   return (
     <div className="feeds">
       <article>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import './SeobinLogin.scss';
 import { Link } from 'react-router-dom';
@@ -32,15 +33,14 @@ const Login = () => {
         placeholder="비밀번호"
       />
       <button
-        onClick={() => navigate('/seobin-main')}
+        onClick={() => navigate('/Seobin-Main')}
         type="submit"
         className={InputValue ? 'loginBtn' : 'loginDisabled'}
         disabled={InputValue ? false : true}
       >
         로그인
       </button>
-      <span>비밀번호를 잊으셨나요??</span>
-      <Link to="/signup">회원가입</Link>
+      <span>비밀번호를 잊으셨나요?</span>
     </div>
   );
 };
