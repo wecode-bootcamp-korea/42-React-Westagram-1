@@ -13,8 +13,6 @@ function Article() {
     setInputValue(state);
   };
 
-  console.log(inputValue);
-
   const addReply = () => {
     setComments([inputValue]);
   };
@@ -98,7 +96,7 @@ function Article() {
         <div className="comments">
           <ul>
             {comments.map(inputValue => {
-              return <CommentBox comments={comments} />;
+              return <CommentBox key={comments} comments={comments} />;
             })}
           </ul>
         </div>
