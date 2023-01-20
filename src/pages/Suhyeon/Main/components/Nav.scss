@@ -1,0 +1,71 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.navWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  background-color: white;
+  height: 60px;
+
+  .icons {
+    width: 30px;
+    margin-left: 15px;
+  }
+
+  .navLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .instagramLogoSuhyeon {
+      width: 50px;
+      border-right: 2px solid #464646;
+      padding-right: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .instagramTitle {
+      font-size: 30px;
+      font-family: 'Lobster', cursive;
+      color: #464646;
+      margin-left: 15px;
+    }
+  }
+
+  .navCenter {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .searchBar {
+      width: 280px;
+      height: 30px;
+      border-radius: 3px;
+      border: 1px solid lightgray;
+      text-align: center;
+      color: lightgray;
+    }
+
+    .searchIcon {
+      width: 15px;
+      position: absolute;
+      left: 115px;
+    }
+  }
+
+  .navRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

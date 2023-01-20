@@ -1,0 +1,30 @@
+$context-size: 15px;
+
+.storyBox{
+  height: 230px;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: $context-size;
+  overflow:scroll;
+
+  .storyTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;
+    margin-bottom: 10px;
+
+    .storyTopLeft{
+      color: gray;
+    }
+
+    .storyTopRight{
+      border-width: 0px;
+      font-size: $context-size;
+      font-weight: 700;
+      background-color: transparent;
+    }
+  }
+}

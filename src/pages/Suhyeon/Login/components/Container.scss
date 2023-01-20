@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+
+
+  .account{
+    width: 90%;
+    border-radius: 5px;
+    border: solid 1px #E4E4E4;
+    font-size: 13px;
+    color: #B1B1B1;
+    background-color: #DEDEDE;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  #btn{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #8CB4F0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0px;
+  }
+
+}

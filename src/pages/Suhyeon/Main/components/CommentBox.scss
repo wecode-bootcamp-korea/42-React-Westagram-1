@@ -1,0 +1,30 @@
+$context-size: 15px;
+
+.commentBox {
+  .commentWrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-size: $context-size;
+
+    .commentId {
+      font-weight: 800;
+    }
+
+    .commentContext {
+      margin-left: 5px;
+    }
+
+    .commentDeleteIcon {
+      width: 20px;
+      margin-left: 5px;
+      opacity: 40%;
+    }
+
+    .commentHeartIcon {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+}
