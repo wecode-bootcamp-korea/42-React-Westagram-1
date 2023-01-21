@@ -2,6 +2,7 @@ $context-size: 15px;
 
 .article {
   padding-bottom: 10px;
+  border: 1px solid lightgray;
 
   .authorProfileBox {
     display: flex;
@@ -36,7 +37,7 @@ $context-size: 15px;
   }
 
   .articleImgBox {
-    width: 500px;
+    width: 100%;
     height: 500px;
 
     .article_img {
@@ -146,9 +147,21 @@ $context-size: 15px;
       color: gray;
     }
 
-    .commentWriteButton {
+    .hiddenInput {
+      margin: 0px;
+    }
+
+    .btn_disabled {
       border-width: 0px;
       color: #bcd5f0;
+      font-size: $context-size;
+      font-weight: 700;
+      background-color: transparent;
+    }
+
+    .btn_abled {
+      border-width: 0px;
+      color: cornflowerblue;
       font-size: $context-size;
       font-weight: 700;
       background-color: transparent;

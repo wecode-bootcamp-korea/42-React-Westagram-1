@@ -5,9 +5,15 @@ import './Article.scss';
 function Article() {
   const [inputValue, setInputValue] = useState('');
   const [comments, setComments] = useState([]);
+  const [btnState, setBtnState] = useState(true);
+  const [btnColor, setBtnColor] = useState('btn_disabled');
 
   const onInputComments = event => {
     setInputValue(event.target.value);
+    inputValue.length > 0 ? setBtnState(false) : setBtnState(true);
+    inputValue.length > 0
+      ? setBtnColor('btn_abled')
+      : setBtnState('btn_disabled');
   };
 
   const addReply = () => {
@@ -15,6 +21,14 @@ function Article() {
     copyArr.push(inputValue);
     setComments(copyArr);
     setInputValue('');
+  };
+
+  const handleOnKeyPress = e => {
+    if (e.key === 'Enter') {
+      inputValue.length > 0
+        ? addReply()
+        : window.alert('댓글 내용 입력해주세요');
+    }
   };
 
   return (
@@ -105,7 +119,7 @@ function Article() {
         <span className="commentTime">42분 전</span>
       </div>
 
-      <form className="commentWriteBox">
+      <form className="commentWriteBox" onKeyDown={handleOnKeyPress}>
         <input
           type="text"
           className="commentWrite"
@@ -113,10 +127,12 @@ function Article() {
           value={inputValue}
           onChange={onInputComments}
         />
+        <input hidden="hidden" className="hiddenInput" />
         <input
           type="button"
-          className="commentWriteButton"
+          className={btnColor}
           value="게시"
+          disabled={btnState}
           onClick={addReply}
         />
       </form>

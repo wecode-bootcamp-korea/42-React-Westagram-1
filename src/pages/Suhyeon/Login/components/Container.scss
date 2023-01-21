@@ -2,24 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
+  width: 230px;
 
-
-  .account{
-    width: 90%;
+  .account {
+    width: 100%;
     border-radius: 5px;
-    border: solid 1px #E4E4E4;
+    border: solid 1px #e4e4e4;
     font-size: 13px;
-    color: #B1B1B1;
-    background-color: #DEDEDE;
+    color: #b1b1b1;
+    background-color: #dedede;
     margin-bottom: 5px;
     padding: 10px;
   }
 
-  #btn{
+  .btn_disabled {
     width: 100%;
     border-radius: 5px;
-    background-color: #8CB4F0;
+    background-color: #c6dcff;
     color: white;
     font-size: 15px;
     font-weight: 600;
@@ -28,4 +27,16 @@
     border: 0px;
   }
 
+  .btn_abled {
+    width: 100%;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+  }
 }
