@@ -7,7 +7,7 @@ const Login = a => {
   const goToMain = () => {
     navigate('/Main');
   };
-  const [inputId, setInputId] = useState('초기값');
+  const [inputId, setInputId] = useState('');
   const [inputPw, setInputPw] = useState('');
 
   function saveUserId(e) {
@@ -42,9 +42,16 @@ const Login = a => {
         value={inputPw}
         placeholder=" 비밀번호"
       />
-      <button onClick={goToMain} disabled>
-        로그인
-      </button>
+      {inputId.includes('@') && inputPw.length > 4 ? (
+        <button onClick={goToMain} disabled={false}>
+          로그인
+        </button>
+      ) : (
+        <button onClick={goToMain} disabled={true}>
+          로그인
+        </button>
+      )}
+
       <div className="forgot">
         <Link to="#">비밀번호를 잊으셨나요?</Link>
       </div>
