@@ -11,32 +11,7 @@ span {
   font-size: 14px;
 }
 
-.mainFeed {
-  margin: 0 70px;
-  display: flex;
-  flex-wrap: column-wrap;
-}
-
-.navContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 1px solid #dbdbdb;
-  background-color: white;
-  height: 35px;
-  align-items: center;
-  width: 100%;
-}
-
 .boldPoint {
   font-weight: bold;
   font-size: 16px;
-}
-
-li {
-  font-size: 14px;
-}
-
-link {
-  text-decoration: none;
 }

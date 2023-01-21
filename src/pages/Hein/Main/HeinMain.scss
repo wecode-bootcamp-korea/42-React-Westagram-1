@@ -25,9 +25,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 30px;
+  height: 35px;
   padding: 20px 0;
   position: fixed;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: white;
 
   .nav1 {
     display: flex;
@@ -240,6 +244,7 @@ main {
 .mainFeed {
   width: 300px;
   border: 1px solid #dbdbdb;
+  margin: 0 70px;
 }
 
 article,
@@ -280,6 +285,7 @@ article {
   height: 50px;
   border-radius: 100%;
   border: 1px solid #dbdbdb;
+  margin-right: 20px;
 }
 
 .iconPress {
