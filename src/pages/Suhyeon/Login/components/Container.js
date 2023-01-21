@@ -36,6 +36,7 @@ function Container() {
         placeholder="전화번호, 사용자 이름 또는 이메일"
         className="userId account"
         onChange={saveUserId}
+        onKeyUp={isLoginOk}
       />
       <input
         type="password"

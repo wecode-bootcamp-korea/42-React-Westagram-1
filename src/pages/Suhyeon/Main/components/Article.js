@@ -6,15 +6,15 @@ function Article() {
   const [inputValue, setInputValue] = useState('');
   const [comments, setComments] = useState([]);
 
-  //inputValue = 안녕하세요
-
   const onInputComments = event => {
-    let state = event.target.value;
-    setInputValue(state);
+    setInputValue(event.target.value);
   };
 
   const addReply = () => {
-    setComments([inputValue]);
+    const copyArr = [...comments];
+    copyArr.push(inputValue);
+    setComments(copyArr);
+    setInputValue('');
   };
 
   return (
@@ -93,10 +93,10 @@ function Article() {
       </div>
 
       <ul>
-        <div className="comments">
+        <div className="commentsList">
           <ul>
-            {comments.map((inputValue, index) => {
-              return <CommentBox key={index} comments={comments} />;
+            {comments.map((comment, index) => {
+              return <CommentBox key={index} comment={comment} />;
             })}
           </ul>
         </div>
@@ -110,6 +110,7 @@ function Article() {
           type="text"
           className="commentWrite"
           placeholder="댓글 달기..."
+          value={inputValue}
           onChange={onInputComments}
         />
         <input

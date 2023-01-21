@@ -7,7 +7,7 @@ function CommentBox(props) {
       <li>
         <div className="commentWrapper">
           <span className="commentId">neceosecius</span>
-          <span className="commentContext">{props.comments}</span>
+          <span className="commentContext">{props.comment}</span>
         </div>
       </li>
     </div>
