@@ -9,12 +9,10 @@ export default function SoominLogin() {
   const saveUserId = event => {
     setId(event.target.value);
   };
-  console.log('id', id);
   const saveUserPassword = event => {
     setPassword(event.target.value);
   };
-  console.log('password', password);
-
+  const inputValue = id.includes('@') && password.length >= 5;
   return (
     <div className="soominlogin">
       <h1 className="logo">westagram</h1>
@@ -24,16 +22,19 @@ export default function SoominLogin() {
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={saveUserId}
-          value={id}
         />
         <input
           className="we-password"
           type="password"
           placeholder="비밀번호"
           onChange={saveUserPassword}
-          value={password}
         />
-        <button id="login-button" className="login-button" type="submit">
+        <button
+          id="login-button"
+          className="login-button"
+          type="submit"
+          disabled={inputValue ? false : true}
+        >
           로그인
         </button>
       </main>
