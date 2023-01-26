@@ -1,5 +1,6 @@
 @import '../../../../styles/mixin.scss';
 @import '../../../../styles/variables.scss';
+
 .feeds {
   padding: 150px;
 
@@ -56,4 +57,8 @@
   width: 27%;
   height: $middleSize;
   border-radius: 20px;
+}
+
+.airplane-img {
+  width: 500px;
 }

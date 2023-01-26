@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import './Feeds.scss';
 import React, { useState } from 'react';
+import Footer from '../Footer/Footer';
 
 const Feeds = () => {
   const [comment, setComment] = useState('');
@@ -16,38 +15,31 @@ const Feeds = () => {
     setCommentArray(result);
     setComment('');
   };
+
   return (
     <div className="feeds">
       <article>
-        <div className="profile-box">
-          <div className="profile">
-            <img
-              className="airplane-img"
-              src="images/lukas.jpg"
-              rel="sorry"
-              width="500px"
-            />
+        <div className="profile">
+          <img className="circle" src="images/lukas.jpg" alt="Sorry" />
+          <div className="profile-text">
             <p>wecode_bootcamp</p>
             <span>WeCode - 위코드</span>
           </div>
         </div>
-        <div className="like">
-          <img className="feed-img" src="images/duncan.jpg" rel="sorry" />
-          <div className="icon-lower">
-            <div className="icon-lower__icon">
-              <i className="fas fa-heart heartColor" />
-              <i className="far fa-comment" />
-            </div>
-            <div>
-              <i className="far fa-bookmark" />
-            </div>
+        <img className="airplane-img" src="images/lukas.jpg" alt="Sorry" />
+        <div className="icon-lower">
+          <div className="icon-lower__icon">
+            <i className="fas fa-heart heartColor" />
+            <i className="far fa-comment" />
           </div>
-          <div className="profile-like">
-            <img className="circle" src="images/lukas.jpg" width="70px" />
-            <span>Icebear님 외 4명이 좋아합니다</span>
+          <div>
+            <i className="far fa-bookmark" />
           </div>
         </div>
-
+        <div className="like">
+          <img className="circle" src="images/duncan.jpg" alt="Sorry" />
+          <span>Icebear님 외 4명이 좋아합니다</span>
+        </div>
         <div className="bootcamp-described">
           <span>wecode_bootcamp</span>
           <span>
@@ -55,7 +47,7 @@ const Feeds = () => {
           </span>
           <ul className="comment-ul">
             {commentArray.map(function (a, i) {
-              return <p>{commentArray[i]}</p>;
+              return <li key={i}>{commentArray[i]}</li>;
             })}
           </ul>
         </div>
@@ -70,6 +62,7 @@ const Feeds = () => {
           게시
         </button>
       </article>
+      <Footer />
     </div>
   );
 };

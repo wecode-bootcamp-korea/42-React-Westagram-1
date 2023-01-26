@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import './SeobinMain.scss';
 import Nav from './Nav/Nav';
 import Feeds from './Feeds/Feeds';
+import './SeobinMain.scss';
 
 const Home = () => {
-  const [color] = useState('red');
-
   return (
     <main>
       <Nav />
