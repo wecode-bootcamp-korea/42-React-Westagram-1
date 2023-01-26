@@ -109,8 +109,8 @@ function Article() {
       <ul>
         <div className="commentsList">
           <ul>
-            {comments.map((comment, index) => {
-              return <CommentBox key={index} comment={comment} />;
+            {comments.map((comment, id) => {
+              return <CommentBox key={id} comment={comment} />;
             })}
           </ul>
         </div>
