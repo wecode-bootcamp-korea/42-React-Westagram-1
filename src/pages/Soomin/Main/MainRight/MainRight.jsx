@@ -4,7 +4,7 @@ import './MainRight.scss';
 
 export default function MainRight() {
   return (
-    <div class="main-right">
+    <div className="main-right">
       <aside>
         <div className="wecode">
           <Link className="wecode-follower-profile" to="#">

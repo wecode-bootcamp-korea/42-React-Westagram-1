@@ -1,11 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './SoominLogin.scss';
 
 export default function SoominLogin() {
+  const navigate = useNavigate();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+
+  const goToMain = () => {
+    navigate('/soomin-main');
+  };
   const saveUserId = event => {
     setId(event.target.value);
   };
@@ -34,6 +40,7 @@ export default function SoominLogin() {
           className="login-button"
           type="submit"
           disabled={inputValue ? false : true}
+          onClick={goToMain}
         >
           로그인
         </button>

@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './Feed.scss';
 
 export default function Feed() {
+  const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+  const commentInput = event => {
+    setComment(event.target.value);
+  };
+  const onSubmit = event => {
+    const result = [...commentArray, comment];
+    setCommentArray(result);
+    setComment('');
+  };
   return (
     <div className="feed">
       <article>
@@ -73,23 +84,30 @@ export default function Feed() {
             더보기
           </button>
         </div>
-        <div className="comment-box">
+        <form className="comment-box">
           <ol className="comment-wrapper">
-            <li className="comment">
-              <Link to="#">ppobi</Link>
-              <p className="contents">🍰</p>
-            </li>
+            {commentArray.map((comment, index) => (
+              <li className="comment">
+                <p>{comment}</p>
+              </li>
+            ))}
           </ol>
-        </div>
+        </form>
         <span className="time">26분 전</span>
-        <div id="comment-bar" className="comment-bar">
+        <div className="comment-bar">
           <input
             id="comment"
             type="text"
             placeholder="댓글 달기..."
             aria-label="comment"
+            onChange={commentInput}
           />
-          <button id="upload-btn" className="upload" type="submit">
+          <button
+            id="upload-btn"
+            className="upload"
+            type="submit"
+            onClick={onSubmit}
+          >
             게시
           </button>
         </div>
