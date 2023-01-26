@@ -108,7 +108,7 @@ function Article() {
 
       <ul>
         <div className="commentsList">
-          <ul>
+          <ul className="commentList2">
             {comments.map((comment, id) => {
               return <CommentBox key={id} comment={comment} />;
             })}
