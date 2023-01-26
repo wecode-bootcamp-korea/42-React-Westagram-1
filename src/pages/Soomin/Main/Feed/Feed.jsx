@@ -84,7 +84,7 @@ export default function Feed() {
             더보기
           </button>
         </div>
-        <form className="comment-box">
+        <form id="comment-box">
           <ol className="comment-wrapper">
             {commentArray.map((comment, index) => (
               <li className="comment">
@@ -96,11 +96,17 @@ export default function Feed() {
         <span className="time">26분 전</span>
         <div className="comment-bar">
           <input
-            id="comment"
+            className="comment-input"
             type="text"
             placeholder="댓글 달기..."
+            value={comment}
             aria-label="comment"
             onChange={commentInput}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                onSubmit();
+              }
+            }}
           />
           <button
             id="upload-btn"
