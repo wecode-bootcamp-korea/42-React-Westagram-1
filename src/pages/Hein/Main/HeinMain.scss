@@ -221,7 +221,7 @@ main {
 }
 
 .mainRight {
-  width: 400px;
+  width: 350px;
   display: flex;
   flex-direction: column;
 
@@ -255,6 +255,16 @@ article,
   border: 1px solid #dbdbdb;
 }
 
+.storySection {
+  margin-top: 10px;
+}
+
+.StorySectionTop {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
 .storySection,
 .recommandSection {
   width: 300px;
@@ -286,6 +296,7 @@ article {
   border-radius: 100%;
   border: 1px solid #dbdbdb;
   margin-right: 20px;
+  margin-left: 50px;
 }
 
 .iconPress {
@@ -303,11 +314,13 @@ article {
   width: 100%;
   justify-items: center;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
 
   .commentHeart {
     width: 10px;
     height: 10px;
-    margin-right: 20px;
+    margin-left: 20px;
 
     &:hover {
       cursor: pointer;
