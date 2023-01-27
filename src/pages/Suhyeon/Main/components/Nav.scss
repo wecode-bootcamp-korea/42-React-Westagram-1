@@ -35,8 +35,12 @@
     .instagramTitle {
       font-size: 30px;
       font-family: 'Lobster', cursive;
-      color: #464646;
+      color: black;
       margin-left: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

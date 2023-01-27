@@ -1,7 +1,12 @@
 import React from 'react';
 import './Nav.scss';
+import { useNavigate } from 'react-router-dom';
 
 function Nav() {
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/suhyeon-login');
+  };
   return (
     <nav className="nav">
       <div className="navWrapper">
@@ -11,7 +16,10 @@ function Nav() {
             className="instagramLogoSuhyeon"
             src="/images/suhyeonImages/instagram.png"
           />
-          <span className="instagramTitle"> Instagram </span>
+          <span onClick={goToLogin} className="instagramTitle">
+            {' '}
+            Instagram{' '}
+          </span>
         </div>
 
         <div className="navCenter">
