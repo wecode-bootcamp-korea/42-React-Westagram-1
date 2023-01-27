@@ -17,9 +17,7 @@ function Article() {
   };
 
   const addReply = () => {
-    const copyArr = [...comments];
-    copyArr.push(inputValue);
-    setComments(copyArr);
+    setComments(currentArray => [...currentArray, inputValue]);
     setInputValue('');
   };
 
@@ -119,7 +117,7 @@ function Article() {
         <span className="commentTime">42분 전</span>
       </div>
 
-      <form className="commentWriteBox" onKeyDown={handleOnKeyPress}>
+      <form className="commentWriteBox" onKeyPress={handleOnKeyPress}>
         <input
           type="text"
           className="commentWrite"
