@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../Hein/Main/HeinMain.scss';
 import '../../../styles/common.scss';
-
+import Comment from '../../../components/Comment';
 function NavContainer() {
   return (
     <nav className="navContainer">
@@ -54,6 +54,23 @@ function NavContainer() {
 }
 
 function MainFeed() {
+  const [commentList, setCommentList] = useState([
+    {
+      // id: 'MingGu',
+      commentItem: '나를 두고가다니..👊!! 가만두지 않겠다옹!!👿',
+    },
+  ]);
+  //comment가 저장되는 리스트 이며, id : 단순히 갯수를나타내주기 위한,comment: 댓글  )
+  //고유값을 1로 준것 뿐 (고유아이디이므로))
+  const [comment, setComment] = useState('');
+  //댓글
+
+  const saveComment = () => {
+    setCommentList([...commentList, { commentItem: comment }]);
+    setComment(''); //이거댓글 초기화
+  };
+  //comment가 저장되는 리스트에 리스트 객체를 추가하는것 . comment는받아오는 값이라, setComment로 comment로저장
+
   return (
     <main>
       <div className="mainFeed">
@@ -143,20 +160,10 @@ function MainFeed() {
 
             <div className="commentSection">
               <ul className="comments">
-                <li>
-                  <span className="boldPoint">MingGu</span>
-                  <span className="commentContext">
-                    &#128127;나를 두고 가다니 &#128127;..가만두지
-                    않겠다옹&#128074;&#128074;
-                  </span>
-                </li>
-                <li>
-                  <img
-                    className="commentHeart"
-                    src="https://cdn-icons-png.flaticon.com/512/1216/1216575.png"
-                    alt="코멘트하트"
-                  />
-                </li>
+                {commentList.map((obj, idx) => (
+                  <Comment data={obj} key={idx} />
+                  //obj (객체=패키지)를 불러온거임
+                ))}
               </ul>
             </div>
             <span className="commentTime">16분 전</span>
@@ -164,11 +171,24 @@ function MainFeed() {
 
           <div className="putComment">
             <input
+              onChange={e => {
+                setComment(e.target.value);
+              }}
               className="inputComment"
               type="text"
+              value={comment}
               placeholder="댓글 달기..."
+              onKeyPress={e => {
+                if (e.key === 'Enter') {
+                  saveComment();
+                }
+              }}
             />
-            <button className="submitComment" type="submit" disabled>
+            <button
+              className="submitComment"
+              type="submit"
+              onClick={saveComment}
+            >
               게시
             </button>
           </div>
