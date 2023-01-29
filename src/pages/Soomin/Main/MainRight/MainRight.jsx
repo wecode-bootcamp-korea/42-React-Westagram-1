@@ -15,8 +15,10 @@ export default function MainRight() {
             />
           </Link>
           <div>
-            <Link to="#">wecode bootcamp</Link>
-            <p className="color-gray">WeCode | 위코드</p>
+            <Link to="#">
+              wecode bootcamp
+              <p className="color-gray">WeCode | 위코드</p>
+            </Link>
           </div>
         </div>
         <div className="story-box">
@@ -37,7 +39,9 @@ export default function MainRight() {
                   />
                 </Link>
                 <div className="story-upload-time">
-                  <Link to="#">__gkxm_</Link>
+                  <Link to="#" className="follower-info">
+                    __gkxm_
+                  </Link>
                   <p className="color-gray">16분 전</p>
                 </div>
               </li>
@@ -50,7 +54,9 @@ export default function MainRight() {
                   />
                 </Link>
                 <div className="story-upload-time">
-                  <Link to="#">dndbwhgdk</Link>
+                  <Link to="#" className="follower-info">
+                    dndbwhgdk
+                  </Link>
                   <p className="color-gray">3시간 전</p>
                 </div>
               </li>
@@ -63,7 +69,9 @@ export default function MainRight() {
                   />
                 </Link>
                 <div className="story-upload-time">
-                  <Link to="#">ghhkh</Link>
+                  <Link to="#" className="follower-info">
+                    ghhkh
+                  </Link>
                   <p className="color-gray">20시간 전</p>
                 </div>
               </li>
@@ -76,7 +84,9 @@ export default function MainRight() {
                   />
                 </Link>
                 <div>
-                  <Link to="#">ckzkxkgk</Link>
+                  <Link to="#" className="follower-info">
+                    ckzkxkgk
+                  </Link>
                   <p className="color-gray">23시간 전</p>
                 </div>
               </li>

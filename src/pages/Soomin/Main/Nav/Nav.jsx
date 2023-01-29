@@ -14,8 +14,8 @@ export default function Nav() {
           westagram
         </h1>
         <div className="searchbar">
-          <i className="fa-solid fa-magnifying-glass" />
           <input className="search" type="text" placeholder="검색" />
+          <i className="fa-solid fa-magnifying-glass" />
         </div>
         <div className="notice">
           <button type="button" aria-label="search-feed">

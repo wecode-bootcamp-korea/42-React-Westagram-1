@@ -26,23 +26,26 @@
   }
 
   .story-box {
-    height: 150px;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #b2b2b2;
+    border: 1px solid #dadada;
     background-color: #fff;
+  }
+
+  .followers-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .follower-story-box {
+    height: 80px;
     white-space: nowrap;
     overflow: scroll;
 
-    .story-box::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       display: none;
-    }
-
-    .followers-story {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
     }
 
     .profile-wrapper {
@@ -67,7 +70,7 @@
   .recommendation-box {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #b2b2b2;
+    border: 1px solid #dadada;
     background-color: #fff;
 
     .recommendation {

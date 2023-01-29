@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
 import './Feed.scss';
+import Comment from './../Comment/Comment';
 
 export default function Feed() {
   const [comment, setComment] = useState('');
@@ -31,7 +33,7 @@ export default function Feed() {
                 ggangage
               </Link>
             </header>
-            <Link to="">
+            <Link className="view-more" to="">
               <i className="fa-solid fa-ellipsis" />
             </Link>
           </li>
@@ -42,25 +44,36 @@ export default function Feed() {
           alt="feed"
         />
         <div className="feed-icon">
-          <button type="button" aria-label="number of heart">
+          <button
+            className="heart-btn"
+            type="button"
+            aria-label="number of heart"
+          >
             <img
               className="heart-icon"
-              src="https://cdn-icons-png.flaticon.com/512/1538/1538598.png"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
               alt="heart-button"
             />
           </button>
           <button type="button" aria-label="comment">
             <img
               className="comment-icon"
-              src="https://cdn-icons-png.flaticon.com/512/2/2043.png"
+              src="https://cdn-icons-png.flaticon.com/512/5948/5948565.png"
               alt="comment-button"
             />
           </button>
           <button type="button" aria-label="upload">
             <img
               className="upload-icon"
-              src="https://cdn-icons-png.flaticon.com/512/126/126494.png"
+              src="https://cdn-icons-png.flaticon.com/512/747/747416.png"
               alt="upload-button"
+            />
+          </button>
+          <button type="button" aria-label="bookmark">
+            <img
+              className="bookmark-icon"
+              src="https://cdn-icons-png.flaticon.com/512/2099/2099170.png"
+              alt="bookmark-button"
             />
           </button>
         </div>
@@ -73,24 +86,30 @@ export default function Feed() {
             />
             aineworld
           </Link>
-          님&nbsp;<Link to="#">외 10명</Link>이 좋아합니다
+          님&nbsp;
+          <Link to="#" className="follower-info">
+            외 10명
+          </Link>
+          이 좋아합니다
         </div>
         <div className="feed-box">
           <div className="feed-contents">
-            <Link to="#">ggangage</Link>
-            <p className="contents">크리스마스 좋아 ! 🎅🏻</p>
+            <Link to="#" className="user-proflie">
+              ggangage
+            </Link>
+            <p className="contents">크리스마스 좋아 ! 🎅🏻 케이크 맛있겠다 !</p>
           </div>
-          <button type="button" aria-label="view-more">
-            더보기
+          <button
+            className="comment-view-more"
+            type="button"
+            aria-label="view-more"
+          >
+            더 보기
           </button>
         </div>
-        <form id="comment-box">
+        <form id="comment-box" className="comment-box">
           <ol className="comment-wrapper">
-            {commentArray.map((comment, index) => (
-              <li className="comment">
-                <p>{comment}</p>
-              </li>
-            ))}
+            <Comment commentArray={commentArray} />
           </ol>
         </form>
         <span className="time">26분 전</span>

@@ -24,13 +24,13 @@ export default function SoominLogin() {
       <h1 className="logo">westagram</h1>
       <main className="user-info">
         <input
-          className="we-id"
+          className="info-box"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={saveUserId}
         />
         <input
-          className="we-password"
+          className="info-box"
           type="password"
           placeholder="비밀번호"
           onChange={saveUserPassword}
@@ -45,7 +45,7 @@ export default function SoominLogin() {
           로그인
         </button>
       </main>
-      <footer>
+      <footer className="login-footer">
         <Link className="find-password" to="/">
           비밀번호를 잊으셨나요?
         </Link>

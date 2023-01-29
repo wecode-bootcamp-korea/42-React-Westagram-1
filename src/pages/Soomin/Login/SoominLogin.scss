@@ -3,7 +3,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(240, 240, 240);
 
   .soominlogin {
     width: 300px;
@@ -12,48 +11,27 @@ body {
     border: 1px solid #efefef;
     background-color: #fff;
 
-    h1 {
-      font-size: 35px;
-    }
-
     .logo {
       margin-top: 40px;
       font-weight: 600;
+      font-size: 35px;
       font-family: 'Lobster', cursive;
     }
   }
 
-  main.user-info {
+  .user-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 45px;
 
-    input {
-      border: 1px solid #efefef;
-      background-color: #f7f7f7;
-    }
-
-    .we-id {
+    .info-box {
       width: 220px;
       margin-bottom: 10px;
       padding: 10px;
       font-size: 11px;
-    }
-
-    .we-password {
-      width: 220px;
-      padding: 10px;
-      font-size: 11px;
-    }
-    button {
-      background: inherit;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-      padding: 0;
-      overflow: visible;
-      cursor: pointer;
+      border: 1px solid #efefef;
+      background-color: #f7f7f7;
     }
 
     .login-button {
@@ -73,7 +51,7 @@ body {
     }
   }
 
-  footer {
+  .login-footer {
     margin-top: 60px;
 
     .find-password {

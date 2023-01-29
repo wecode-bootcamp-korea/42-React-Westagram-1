@@ -1,12 +1,11 @@
 .feed {
   display: flex;
   justify-content: center;
-  border: 1px solid #b2b2b2;
+  border: 1px solid #dadada;
   background-color: #fff;
 
   .from-wrapper {
     margin: 5px;
-    list-style: none;
 
     .profile-wrapper {
       display: flex;
@@ -34,6 +33,10 @@
         margin-right: 10px;
       }
     }
+
+    .view-more {
+      margin-left: 280px;
+    }
   }
 
   .feed-photo1 {
@@ -46,20 +49,26 @@
     margin: 10px;
 
     .heart-icon {
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 21px;
       margin-right: 10px;
     }
 
     .comment-icon {
-      width: 20px;
-      height: 20px;
+      width: 19px;
+      height: 19px;
       margin-right: 10px;
     }
 
     .upload-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .bookmark-icon {
       width: 20px;
       height: 20px;
+      margin-left: 280px;
     }
   }
 
@@ -85,7 +94,7 @@
 
   .feed-box {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin: 10px;
     margin-bottom: 0px;
     font-size: 12px;
@@ -94,8 +103,17 @@
       display: flex;
 
       .contents {
+        width: 120px;
         margin-left: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
+    }
+
+    .comment-view-more {
+      font-size: 12px;
+      color: #b1b1b1;
     }
   }
 
@@ -105,13 +123,17 @@
     font-size: 12px;
 
     .comment-wrapper {
-      list-style: none;
-
+      width: 100%;
       .comment {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         font-size: 12px;
 
+        .comment-heart {
+          margin-right: 10px;
+          color: #b1b1b1;
+        }
         .contents {
           margin-left: 5px;
         }
@@ -128,10 +150,22 @@
   .comment-bar {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin-top: 5px;
+    padding: 10px;
+    border-top: 1px solid #dbdbdb;
     font-size: 12px;
 
+    .comment-input {
+      width: 100%;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+
     .upload {
+      width: 30px;
+      font-size: 12px;
       color: skyblue;
     }
   }

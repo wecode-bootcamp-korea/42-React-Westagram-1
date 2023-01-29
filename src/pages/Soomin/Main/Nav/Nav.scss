@@ -3,12 +3,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
     height: 50px;
+    border-bottom: 1px solid #dadada;
     background-color: #fff;
 
     .logo-box {
       display: flex;
       align-items: center;
+      font-size: 25px;
       font-family: 'Lobster', cursive;
 
       .logo {
@@ -36,10 +42,14 @@
       .search {
         width: 240px;
         height: 25px;
-        border: solid;
+        padding: 10px;
+        border: 1px solid rgb(240, 240, 240);
         border-radius: 5px;
-        color: rgb(240, 240, 240);
         background-color: #fff;
+
+        &:focus {
+          outline: none;
+        }
       }
     }
 
