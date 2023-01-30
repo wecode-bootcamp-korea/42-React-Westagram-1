@@ -32,7 +32,7 @@ const Login = () => {
         placeholder="비밀번호"
       />
       <button
-        onClick={() => navigate('/Seobin-Main')}
+        onClick={() => navigate('/seobin-main')}
         type="submit"
         className={InputValue ? 'loginBtn' : 'loginDisabled'}
         disabled={InputValue ? false : true}
