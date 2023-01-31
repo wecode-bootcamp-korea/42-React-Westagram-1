@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import './Container.scss';
 import { useNavigate } from 'react-router-dom';
+import './Container.scss';
 
 function Container() {
   const [inputId, setInputId] = useState('');

@@ -1,13 +1,13 @@
 import React from 'react';
-import './StoryBox.scss';
 import StoryProfile from './StoryProfile';
+import './StoryBox.scss';
 
 function StoryBox() {
   return (
     <div className="storyBox">
       <div className="storyTop">
         <span className="storyTopLeft">스토리</span>
-        <input type="button" className="storyTopRight" value="모두 보기" />
+        <button className="storyTopRight">모두 보기</button>
       </div>
       <div className="storyBottom">
         <ul className="storyList">

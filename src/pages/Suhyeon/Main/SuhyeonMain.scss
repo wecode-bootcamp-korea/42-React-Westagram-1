@@ -8,9 +8,8 @@ $context-size: 15px;
 
 body {
   display: block;
-  background-color: #f8f8f8;
-  margin: 0px;
   width: 100%;
+  background-color: #f8f8f8;
 }
 
 .profilePopUp {
@@ -76,16 +75,4 @@ article {
   display: flex;
   flex-direction: column;
   width: 300px;
-}
-
-.info {
-  height: 100px;
-  font-size: 13px;
-  color: gray;
-  margin-top: 15px;
-  line-height: 15px;
-
-  .watermark {
-    margin-top: 10px;
-  }
 }
