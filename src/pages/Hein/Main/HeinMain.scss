@@ -25,13 +25,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 35px;
-  padding: 20px 0;
   position: fixed;
+  height: 35px;
   width: 100%;
-  align-items: center;
-  border-bottom: 1px solid #dbdbdb;
+  padding: 20px 0;
   background-color: white;
+  border-bottom: 1px solid #dbdbdb;
 
   .nav1 {
     display: flex;
@@ -43,13 +42,13 @@
     }
 
     .Westagram {
+      display: flex;
+      padding-left: 10px;
+      border-left: 1.5px solid black;
       font-family: 'Lobster', cursive;
       font-size: 30px;
-      cursor: pointer;
       color: black;
-      display: flex;
-      border-left: 1.5px solid black;
-      padding-left: 10px;
+      cursor: pointer;
     }
   }
 
@@ -57,14 +56,14 @@
     width: 270px;
     height: 23px;
     padding: 5px;
-    background-color: #fafafa;
+    box-sizing: content-box;
     border: 1px solid #dbdbdb;
     border-radius: 1px;
     background-image: url(https://cdn-icons-png.flaticon.com/512/868/868282.png);
+    background-position: 38%center;
     background-size: 11px;
     background-repeat: no-repeat;
-    background-position: 38%center;
-    box-sizing: content-box;
+    background-color: #fafafa;
     text-align: center;
     font-size: 15px;
 
@@ -107,20 +106,20 @@
 }
 
 main {
-  width: 100%;
-  padding-top: 120px;
-  padding-bottom: 30px;
   display: flex;
   justify-content: space-around;
   align-content: center;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 30px;
 
   header {
-    height: 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 60px;
     padding: 0 20px;
     border: 1px solid #dbdbdb;
-    align-items: center;
 
     .profileOfArticle {
       display: flex;
@@ -165,16 +164,16 @@ main {
     margin-bottom: 5px;
 
     .likedPP {
-      height: 40px;
       display: flex;
       align-items: center;
+      height: 40px;
 
       .profilePicR {
         width: 25px;
         height: 25px;
+        margin-right: 7px;
         border-radius: 100%;
         border: 1px solid #dbdbdb;
-        margin-right: 7px;
       }
     }
     .commentTime {
@@ -186,20 +185,19 @@ main {
   }
   .commentSection {
     padding-top: 5px;
-    //comments
   }
 
   .putComment {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #dbdbdb;
     padding: 0 10px;
+    border: 1px solid #dbdbdb;
 
     .inputComment {
+      width: 610px;
       border: none;
       font-size: 16px;
-      width: 610px;
 
       &:focus {
         outline: none;
@@ -211,19 +209,19 @@ main {
       }
     }
     .submitComment {
-      background-color: transparent;
-      color: #dbdbdb;
       width: 50px;
       height: 50px;
+      color: #dbdbdb;
+      background-color: transparent;
       font-size: 16px;
     }
   }
 }
 
 .mainRight {
-  width: 350px;
   display: flex;
   flex-direction: column;
+  width: 350px;
 
   .mainTopWrap {
     display: flex;
@@ -286,17 +284,17 @@ article {
 .ProfilePic {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
   border: 1px solid #dbdbdb;
+  border-radius: 100%;
 }
 
 .myProfilePic2 {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  border: 1px solid #dbdbdb;
   margin-right: 20px;
   margin-left: 50px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
 }
 
 .iconPress {
@@ -311,11 +309,11 @@ article {
 
 .comments {
   display: flex;
-  width: 100%;
   justify-items: center;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
 
   .commentHeart {
     width: 10px;
@@ -338,9 +336,9 @@ article {
 
 .StorySectionTop,
 .recommandSectionTop {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .storyList {
@@ -350,18 +348,18 @@ article {
 
 .westaScript,
 .subProfile {
-  font-size: 14px;
   color: #afafaf;
+  font-size: 14px;
 }
 
 .follow {
-  font-weight: 700;
   color: #0995f6;
+  font-weight: 700;
 }
 
 .storyTitle {
-  font-weight: 700;
   color: #afafaf;
+  font-weight: 700;
 }
 .storyMore {
   font-weight: 700;

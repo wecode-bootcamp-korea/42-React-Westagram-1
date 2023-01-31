@@ -12,11 +12,9 @@ const Login = a => {
 
   function saveUserId(e) {
     setInputId(e.target.value);
-    console.log(e.target.value);
   }
   function saveUserPw(e) {
     setInputPw(e.target.value);
-    console.log(e.target.value);
   }
 
   return (

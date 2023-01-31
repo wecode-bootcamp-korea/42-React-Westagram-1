@@ -11,14 +11,14 @@
 
   .Westagram2 {
     display: flex;
-    font-family: 'Lobster', cursive;
-    font-weight: lighter;
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-size: 48px;
     margin-top: 36px;
     margin-bottom: 36px;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    font-size: 48px;
     cursor: pointer;
 
     a {
@@ -31,16 +31,16 @@ input {
   display: block;
   width: 268px;
   height: 30px;
+  margin: 0 4px 6px 4px;
   padding: 2px;
   border: 1px solid #dbdbdb;
-  margin: 0 4px 6px 4px;
   border-radius: 4px;
 }
 
 button {
   width: 274px;
   height: 32px;
-  margin: 8px 4px 8px 4px;
+  margin: 8px 4px;
   background-color: #4cb5f9;
   color: white;
   border: none;

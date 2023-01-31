@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../Hein/Main/HeinMain.scss';
 import '../../../styles/common.scss';
 import Comment from '../../../components/Comment';
+
 function NavContainer() {
   return (
     <nav className="navContainer">
@@ -56,20 +57,16 @@ function NavContainer() {
 function MainFeed() {
   const [commentList, setCommentList] = useState([
     {
-      // id: 'MingGu',
       commentItem: '나를 두고가다니..👊!! 가만두지 않겠다옹!!👿',
     },
   ]);
-  //comment가 저장되는 리스트 이며, id : 단순히 갯수를나타내주기 위한,comment: 댓글  )
-  //고유값을 1로 준것 뿐 (고유아이디이므로))
+
   const [comment, setComment] = useState('');
-  //댓글
 
   const saveComment = () => {
     setCommentList([...commentList, { commentItem: comment }]);
-    setComment(''); //이거댓글 초기화
+    setComment('');
   };
-  //comment가 저장되는 리스트에 리스트 객체를 추가하는것 . comment는받아오는 값이라, setComment로 comment로저장
 
   return (
     <main>
@@ -142,7 +139,7 @@ function MainFeed() {
                 alt="좋아요한사람"
               />
               <p>
-                <span className="boldPoint">MingGu</span>님{' '}
+                <span className="boldPoint">MingGu</span>님
                 <span className="boldPoint">외 616명</span>이 좋아합니다
               </p>
             </div>
@@ -160,9 +157,8 @@ function MainFeed() {
 
             <div className="commentSection">
               <ul className="comments">
-                {commentList.map((obj, idx) => (
-                  <Comment data={obj} key={idx} />
-                  //obj (객체=패키지)를 불러온거임
+                {commentList.map((obj, id) => (
+                  <Comment data={obj} key={id} />
                 ))}
               </ul>
             </div>
