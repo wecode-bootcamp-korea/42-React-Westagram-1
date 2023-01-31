@@ -1,7 +1,6 @@
-/* eslint-disable */
 import React, { useState } from 'react';
-import './SeobinLogin.scss';
 import { useNavigate } from 'react-router-dom';
+import './SeobinLogin.scss';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,17 +14,17 @@ const Login = () => {
   };
   const InputValue = id.includes('@') && pw.length >= 5;
   return (
-    <div className="box">
+    <div className="login">
       <h1>instargram</h1>
       <input
-        className="box-id inputId"
+        className="loginId inputId"
         value={id}
         onChange={saveUserId}
         type="text"
         placeholder="전화번호, 사용자 이름 또는 이메일"
       />
       <input
-        className="box-pw inputPw"
+        className="loginPw inputPw"
         value={pw}
         onChange={saveUserPw}
         type="password"

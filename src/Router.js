@@ -5,7 +5,6 @@ import HeinLogin from './pages/Hein/Login/HeinLogin';
 */
 import SeobinMain from './pages/Seobin/Main/SeobinMain';
 import SeobinLogin from './pages/Seobin/Login/SeobinLogin';
-import FeedPost from '././pages/Seobin/Main/Feeds/Feeds';
 /*
 import SoominMain from './pages/Soomin/Main/SoominMain';
 import SoominLogin from './pages/Soomin/Login/SoominLogin';

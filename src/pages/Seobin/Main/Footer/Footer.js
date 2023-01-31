@@ -3,7 +3,7 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <ul className="menu">
+    <ul className="menuList">
       {MENU_LIST.map(menuList => {
         return <li key={menuList.id}>{menuList.menuName}</li>;
       })}

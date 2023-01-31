@@ -9,85 +9,69 @@ html {
 }
 
 body {
-  background-color: #fafafa;
   margin: 0;
+  background-color: #fafafa;
 }
 
-ul {
+.ulStyle {
   list-style: none;
 }
 
 main {
   display: flex;
   justify-content: center;
-}
-
-.article {
-  width: 500px;
-  border-radius: 10px;
-  border: 2px solid #dbdbdb;
-  background-color: white;
-}
-
-.comment {
-  width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.name {
-  margin-right: 10px;
-}
-
-.main-right {
-  width: 100%;
-  margin-right: 20px;
-}
-
-.circle {
-  @include circle(flex);
-}
-
-.view-all {
-  display: flex;
-  justify-content: space-between;
-}
-
-.story-box {
-  background-color: white;
-  border: 2px solid #dbdbdb;
-  border-radius: 10px;
-}
-
-.follow-li-box {
-  display: flex;
-  align-items: center;
-  line-height: 5px;
-  img {
-    width: 90px;
+  .recomment {
+    width: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
-  .follow-li-box p:nth-child(2) {
-    color: gray;
+  .name {
+    margin-right: 10px;
   }
-}
-
-img {
-  @include circle(flex);
-}
-
-.main-right {
-  width: 280px;
-  .main-right-profile {
+  .mainRight {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .circle {
+    @include circle(flex);
+  }
+  .storyAll {
+    display: flex;
+    justify-content: space-between;
+  }
+  .storyBox {
+    background-color: white;
+    border: 2px solid #dbdbdb;
+    border-radius: 10px;
+  }
+  .storyLiBox {
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    line-height: 5px;
     img {
-      width: 100px;
+      width: 90px;
     }
-    .main-right-profile-text p:nth-child(2) {
+    .storyLiBox p:nth-child(2) {
       color: gray;
-      line-height: 5px;
+    }
+  }
+  img {
+    @include circle(flex);
+  }
+  .mainRight {
+    width: 280px;
+    .mainRightProfile {
+      display: flex;
+      align-items: center;
+      margin-top: 90px;
+      img {
+        width: 100px;
+      }
+      .mainRightProfileText p:nth-child(2) {
+        color: gray;
+        line-height: 5px;
+      }
     }
   }
 }

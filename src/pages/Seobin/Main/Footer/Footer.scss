@@ -1,11 +1,11 @@
-.menu {
+.menuList {
   display: flex;
   justify-content: space-between;
   color: gray;
   li {
-    list-style: none;
     padding-right: 10px;
     border-right: 2px solid gray;
+    list-style: none;
     cursor: pointer;
   }
 }

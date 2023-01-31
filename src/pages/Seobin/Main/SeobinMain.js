@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Nav from './Nav/Nav';
+import React from 'react';
 import Feeds from './Feeds/Feeds';
+import Nav from './Nav/Nav';
 import './SeobinMain.scss';
 
 const Home = () => {
@@ -8,24 +8,24 @@ const Home = () => {
     <main>
       <Nav />
       <Feeds />
-      <div className="main-right">
-        <div className="main-right-profile">
+      <div className="mainRight">
+        <div className="mainRightProfile">
           <img alt="sorry" src="./images/lukas.jpg" />
-          <div className="main-right-profile-text">
+          <div className="mainRightProfileText">
             <p>Wecode_bootcamp</p>
             <p>WeCode | 위코드</p>
           </div>
         </div>
         <div>
-          <div className="story-box">
-            <div className="view-all">
+          <div className="story">
+            <div className="storyAll">
               <span>스토리</span>
               <span>모두 보기</span>
             </div>
-            <div className="story">
-              <ul className="story-ul">
-                <li className="story-li">
-                  <div className="follow-li-box">
+            <div className="storyBox">
+              <ul className="storyUl ulStyle">
+                <li className="storyLi">
+                  <div className="storyLiBox">
                     <img
                       alt="sorry"
                       className="circle"
@@ -37,8 +37,8 @@ const Home = () => {
                     </div>
                   </div>
                 </li>
-                <li className="story-li">
-                  <div className="follow-li-box">
+                <li className="storyLi">
+                  <div className="storyLiBox">
                     <img
                       alt="sorry"
                       className="circle"
@@ -50,8 +50,8 @@ const Home = () => {
                     </div>
                   </div>
                 </li>
-                <li className="story-li">
-                  <div className="follow-li-box">
+                <li className="storyLi">
+                  <div className="storyLiBox">
                     <img
                       alt="sorry"
                       className="circle"
@@ -63,8 +63,8 @@ const Home = () => {
                     </div>
                   </div>
                 </li>
-                <li className="story-li">
-                  <div className="follow-li-box">
+                <li className="storyLi">
+                  <div className="storyLiBox">
                     <img
                       alt="sorry"
                       className="circle"
@@ -80,15 +80,15 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="recommend-box">
-          <div className="view-all">
+        <div className="recommentDiv">
+          <div className="storyAll">
             <span>회원님을 위한 추천</span>
             <span>모두 보기</span>
           </div>
         </div>
-        <ul className="recommend-ul">
+        <ul className="recommendUl ulStyle">
           <li>
-            <div className="follow-li-box">
+            <div className="storyLiBox">
               <img alt="sorry" src="./images/duncan.jpg" />
               <div>
                 <p>bowerbird_sym</p>
@@ -97,7 +97,7 @@ const Home = () => {
             </div>
           </li>
           <li>
-            <div className="follow-li-box">
+            <div className="storyLiBox">
               <img alt="sorry" src="./images/duncan.jpg" />
               <div>
                 <p>bower_sym</p>
@@ -106,7 +106,7 @@ const Home = () => {
             </div>
           </li>
           <li>
-            <div className="follow-li-box">
+            <div className="storyLiBox">
               <img alt="sorry" src="./images/duncan.jpg" />
               <div>
                 <p>bird_sym</p>
@@ -115,7 +115,7 @@ const Home = () => {
             </div>
           </li>
           <li>
-            <div className="follow-li-box">
+            <div className="storyLiBox">
               <img alt="sorry" src="./images/duncan.jpg" />
               <div>
                 <p>bobird_sym</p>
