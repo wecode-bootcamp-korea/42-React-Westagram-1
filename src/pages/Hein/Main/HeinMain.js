@@ -351,13 +351,12 @@ function MainFeed() {
         </div>
 
         <footer>
-          <p className="westaScript">
-            Westagram 정보∙ 지원∙ 홍보 센터 ∙ AIP∙
-            <br />
-            채용 정보∙ 개인정보처리방침∙ 약관 ∙ 디렉터리∙ 프로필∙ 해시태그∙ 언어
-            <br />
-            <br />© 2023 WESTAGRAM
-          </p>
+          <ul className="westaScript">
+            {WESTAGRAM_ASIDE.map(aside => {
+              return <li key={aside.id}>{aside.asideName}</li>;
+            })}
+            <li>© 2023 WESTAGRAM</li>
+          </ul>
         </footer>
       </div>
     </main>
@@ -374,3 +373,17 @@ function Main() {
 }
 
 export default Main;
+
+const WESTAGRAM_ASIDE = [
+  { id: 1, asideName: 'Westagram 정보' },
+  { id: 2, asideName: ' ∙ 지원' },
+  { id: 3, asideName: ' ∙ 홍보 센터' },
+  { id: 4, asideName: ' ∙ AIP ∙' },
+  { id: 5, asideName: '채용 정보' },
+  { id: 6, asideName: '∙ 개인정보처리방침' },
+  { id: 7, asideName: ' ∙ 약관 ∙' },
+  { id: 8, asideName: '디렉토리' },
+  { id: 9, asideName: '∙ 프로필' },
+  { id: 10, asideName: ' ∙ 해시태그' },
+  { id: 11, asideName: ' ∙ 언어' },
+];
