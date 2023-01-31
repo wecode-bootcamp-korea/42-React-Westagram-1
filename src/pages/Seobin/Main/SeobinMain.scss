@@ -75,3 +75,9 @@ main {
     }
   }
 }
+
+@media (max-width: 900px) {
+  .mainRight {
+    display: none;
+  }
+}

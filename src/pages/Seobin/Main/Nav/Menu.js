@@ -1,5 +1,5 @@
 import React from 'react';
-import './List.scss';
+import './Menu.scss';
 
 const List = () => {
   return (

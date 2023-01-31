@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import List from '../Nav/List';
+import List from './Menu';
 import './Nav.scss';
 
 const Nav = () => {
