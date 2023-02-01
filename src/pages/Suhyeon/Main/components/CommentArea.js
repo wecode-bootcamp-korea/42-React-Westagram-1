@@ -17,12 +17,18 @@ function CommentArea() {
   };
 
   const addReply = () => {
-    setComments(currentArray => [...currentArray, inputValue]);
+    setComments(currentArray => [
+      ...currentArray,
+      { id: comments.length, text: inputValue },
+    ]);
+
     setInputValue('');
   };
 
-  const onDelete = targetId => {
-    const newArray = comments.filter(item => item.id !== targetId);
+  const onDelete = id => {
+    const newArray = comments.filter(item => {
+      return item.id !== id;
+    });
     setComments(newArray);
   };
 

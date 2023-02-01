@@ -57,22 +57,27 @@
       border-radius: 3px;
       border: 1px solid lightgray;
       text-align: center;
-      color: lightgray;
+      color: gray;
     }
 
     .searchIcon {
       width: 15px;
       position: absolute;
-      left: 115px;
+      left: 70px;
     }
 
     .suggestions_container {
+      display: none;
       width: 280px;
       background-color: white;
       position: fixed;
       top: 45px;
       border-radius: 10px;
       box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.2);
+
+      &.is_active {
+        display: block;
+      }
 
       .suggestions_lists {
         padding: 20px;

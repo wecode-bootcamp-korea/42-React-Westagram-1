@@ -53,24 +53,28 @@ function Nav() {
             className="searchBar"
             onChange={onUserInput}
           />
-          <div className="suggestions_container">
+          <div
+            className={`suggestions_container ${userInput ? 'is_active' : ''}`}
+          >
             <ul className="suggestions_lists">
-              {searchedLists.map((searchedLists, id) => {
-                return (
-                  <li key={id} className="suggestions_list">
-                    <div className="suggestions_icon">
-                      <img
-                        alt="profileImg"
-                        src={searchedLists.userImg}
-                        className="suggestions_icon_img"
-                      />
-                    </div>
-                    <span className="suggestions_id">
-                      {searchedLists.userId}
-                    </span>
-                  </li>
-                );
-              })}
+              {userInput !== ''
+                ? searchedLists.map((searchedList, id) => {
+                    return (
+                      <li key={id} className="suggestions_list">
+                        <div className="suggestions_icon">
+                          <img
+                            alt="profileImg"
+                            src={searchedList.userImg}
+                            className="suggestions_icon_img"
+                          />
+                        </div>
+                        <span className="suggestions_id">
+                          {searchedList.userId}
+                        </span>
+                      </li>
+                    );
+                  })
+                : null}
             </ul>
           </div>
         </div>

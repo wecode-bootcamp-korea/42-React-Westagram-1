@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeedContext.scss';
 
-function FeedContext({ feedList, feedLists }) {
+function FeedContext({ feedList, feedLists, id }) {
   return (
     <>
       <div className="authorProfileBox">
