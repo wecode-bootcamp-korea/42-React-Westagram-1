@@ -12,7 +12,7 @@ function CommentBox({ comment, onDelete, id }) {
             alt="deleteIcon"
             className="commentDeleteIcon"
             src="/images/suhyeonImages/recycle.png"
-            onClick={() => onDelete(comment.id)}
+            onClick={() => onDelete(id)}
           />
         </div>
       </li>

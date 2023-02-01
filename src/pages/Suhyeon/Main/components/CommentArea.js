@@ -21,8 +21,8 @@ function CommentArea() {
     setInputValue('');
   };
 
-  const onDelete = id => {
-    const newArray = comments.filter(comment => comment.id !== id);
+  const onDelete = targetId => {
+    const newArray = comments.filter(item => item.id !== targetId);
     setComments(newArray);
   };
 

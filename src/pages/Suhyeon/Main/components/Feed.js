@@ -1,23 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FeedContext from './FeedContext';
 import CommentArea from './CommentArea';
 import './Feed.scss';
 
-function Feed({
-  onDelete,
-  handleOnKeyPress,
-  inputValue,
-  onInputComments,
-  btnColor,
-  btnState,
-  addReply,
-  comments,
-}) {
+function Feed() {
   const [feedLists, setFeedLists] = useState([]);
 
-  fetch('/data/feedData.json')
-    .then(response => response.json())
-    .then(data => setFeedLists(data));
+  useEffect(() => {
+    fetch('/data/feedData.json')
+      .then(response => response.json())
+      .then(data => setFeedLists(data));
+  }, []);
 
   return (
     <>
@@ -25,16 +18,7 @@ function Feed({
         return (
           <>
             <FeedContext key={id} feedLists={feedLists} feedList={feedList} />
-            <CommentArea
-              onDelete={onDelete}
-              handleOnKeyPress={handleOnKeyPress}
-              inputValue={inputValue}
-              onInputComments={onInputComments}
-              btnColor={btnColor}
-              btnState={btnState}
-              addReply={addReply}
-              comments={comments}
-            />
+            <CommentArea />
           </>
         );
       })}

@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Nav.scss';
 import { useNavigate } from 'react-router-dom';
 
 function Nav() {
+  const [suggestionsLists, setSuggestionsLists] = useState([]);
+  const [userInput, setUserInput] = useState('');
+
   const navigate = useNavigate();
+
   const goToLogin = () => {
     navigate('/suhyeon-login');
   };
+
+  const onUserInput = event => setUserInput(event.target.value);
+
+  useEffect(() => {
+    fetch('/data/suggestionsData.json')
+      .then(response => response.json())
+      .then(data => setSuggestionsLists(data));
+  }, []);
+
+  const searchedLists = suggestionsLists.filter(suggenstionsList => {
+    return suggenstionsList.userId
+      .toLowerCase()
+      .includes(userInput.toLowerCase());
+  });
+
   return (
     <nav className="nav">
       <div className="navWrapper">
@@ -28,7 +47,32 @@ function Nav() {
             className="searchIcon"
             src="/images/suhyeonImages/search.png"
           />
-          <input type="text" placeholder="검색" className="searchBar" />
+          <input
+            type="text"
+            placeholder="검색"
+            className="searchBar"
+            onChange={onUserInput}
+          />
+          <div className="suggestions_container">
+            <ul className="suggestions_lists">
+              {searchedLists.map((searchedLists, id) => {
+                return (
+                  <li key={id} className="suggestions_list">
+                    <div className="suggestions_icon">
+                      <img
+                        alt="profileImg"
+                        src={searchedLists.userImg}
+                        className="suggestions_icon_img"
+                      />
+                    </div>
+                    <span className="suggestions_id">
+                      {searchedLists.userId}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
 
         <div className="navRight">

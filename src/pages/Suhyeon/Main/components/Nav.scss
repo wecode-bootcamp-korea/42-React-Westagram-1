@@ -65,6 +65,47 @@
       position: absolute;
       left: 115px;
     }
+
+    .suggestions_container {
+      width: 280px;
+      background-color: white;
+      position: fixed;
+      top: 45px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.2);
+
+      .suggestions_lists {
+        padding: 20px;
+
+        .suggestions_list {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 50px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid lightgray;
+
+          .suggestions_icon {
+            position: relative;
+            width: 35px;
+            height: 35px;
+
+            border: 2px solid transparent;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 0px;
+
+            .suggestions_icon_img {
+              width: 100%;
+            }
+          }
+          .suggestions_id {
+            font-weight: 700;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
   }
 
   .navRight {
