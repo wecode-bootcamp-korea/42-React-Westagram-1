@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import './Nav.scss';
 import { useNavigate } from 'react-router-dom';
+import ProfilePopUp from './ProfilePopUp';
+import './Nav.scss';
 
 function Nav() {
   const [suggestionsLists, setSuggestionsLists] = useState([]);
   const [userInput, setUserInput] = useState('');
+  const [isPopUp, setIsPopUp] = useState(false);
+
+  const handlePopUp = () => {
+    return setIsPopUp(!isPopUp);
+  };
 
   const navigate = useNavigate();
 
@@ -78,7 +84,7 @@ function Nav() {
             </ul>
           </div>
         </div>
-
+        {isPopUp ? <ProfilePopUp /> : ''}
         <div className="navRight">
           <img
             alt="compassIcon"
@@ -94,6 +100,7 @@ function Nav() {
             alt="uesrIcon"
             className="userIcon icons"
             src="/images/suhyeonImages/user.png"
+            onClick={handlePopUp}
           />
         </div>
       </div>

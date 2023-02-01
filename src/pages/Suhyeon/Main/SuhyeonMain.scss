@@ -1,6 +1,8 @@
 @media (max-width: 800px) {
-  .mobile {
-    display: none;
+  .main {
+    .mobile {
+      display: none;
+    }
   }
 }
 
@@ -12,42 +14,9 @@ body {
   background-color: #f8f8f8;
 }
 
-.profilePopUp {
-  display: none;
-  position: absolute;
-  right: 170px;
-  width: 200px;
-  background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  z-index: 10;
-
-  .profileList {
-    font-size: $context-size;
-    margin: 15px;
-
-    .profileMenu {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-
-      .profileIcon {
-        position: relative;
-        width: 20px;
-      }
-
-      .profileText {
-        margin-left: 10px;
-        font-size: $context-size;
-      }
-
-      .profile_logOut {
-        border-top: 1px solid lightgray;
-        padding-top: 15px;
-        padding-bottom: 5px;
-      }
-    }
-  }
+.asideWrapper {
+  position: fixed;
+  width: 300px;
 }
 
 main {

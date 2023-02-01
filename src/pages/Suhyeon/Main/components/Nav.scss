@@ -118,4 +118,45 @@
     justify-content: center;
     align-items: center;
   }
+
+  .profilePopUp {
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.2);
+    z-index: 10;
+
+    .profileList {
+      font-size: 15px;
+      margin: 15px;
+
+      .profileMenu {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        .profileIcon {
+          position: relative;
+          width: 20px;
+          opacity: 80%;
+        }
+
+        .profileText {
+          margin-left: 10px;
+          font-size: 15px;
+        }
+
+        .profile_logOut {
+          border-top: 1px solid lightgray;
+          padding-top: 15px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
 }

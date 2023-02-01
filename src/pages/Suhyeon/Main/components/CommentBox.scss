@@ -22,9 +22,16 @@ $context-size: 15px;
       opacity: 40%;
     }
 
-    .commentHeartIcon {
+    .commentHeartIcon_off {
       width: 20px;
       margin-left: 10px;
+      content: url('/assets/images/loveOff.png');
+    }
+
+    .commentHeartIcon_on {
+      width: 20px;
+      margin-left: 10px;
+      content: url('/assets/images/loveOn.png');
     }
   }
 }

@@ -15,10 +15,12 @@ const Main = () => (
         <Article />
       </section>
       <aside className="mobile">
-        <MyProfileBox />
-        <StoryBox />
-        <RecommendBox />
-        <Footer />
+        <div className="asideWrapper">
+          <MyProfileBox />
+          <StoryBox />
+          <RecommendBox />
+          <Footer />
+        </div>
       </aside>
     </main>
   </div>
