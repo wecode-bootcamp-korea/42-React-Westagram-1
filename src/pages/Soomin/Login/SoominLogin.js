@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SoominLogin.scss';
 
 export default function SoominLogin() {
@@ -18,7 +17,9 @@ export default function SoominLogin() {
   const saveUserPassword = event => {
     setPassword(event.target.value);
   };
+
   const inputValue = id.includes('@') && password.length >= 5;
+
   return (
     <div className="soominlogin">
       <h1 className="logo">westagram</h1>

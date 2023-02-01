@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './Footer/Footer';
 import './MainRight.scss';
 
 export default function MainRight() {
@@ -110,8 +111,10 @@ export default function MainRight() {
                     alt="#"
                   />
                 </Link>
-                <div>
-                  <Link to="#">djfudnj</Link>
+                <div className="recommendation-wrapper">
+                  <Link className="followe-recommendation" to="#">
+                    djfudnj
+                  </Link>
                   <p className="recommendation-color">
                     hahhho님 외 12명이 팔로우합니다
                   </p>
@@ -171,15 +174,7 @@ export default function MainRight() {
             </ul>
           </div>
         </div>
-        <footer>
-          <p>
-            instagram 정보 &#183; 지원 &#183; 홍보 센터 &#183; API &#183; 채용
-            정보 &#183; 개인정보처리방침 &#183; 약관 &#183; 디렉터리 &#183;
-            프로필 &#183; 해시태그 &#183; 언어
-          </p>
-          <br />
-          <p>&copy; 2023 INSTAGRAM</p>
-        </footer>
+        <Footer />
       </aside>
     </div>
   );

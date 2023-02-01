@@ -32,11 +32,20 @@
     background-color: #fff;
   }
 
+  .color-gray {
+    color: gray;
+  }
+
   .followers-story {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
+
+    .see-all {
+      font-size: 12px;
+      font-weight: 600;
+    }
   }
 
   .follower-story-box {
@@ -61,8 +70,9 @@
         overflow: hidden;
         margin-right: 10px;
       }
-      .color-gray {
-        color: gray;
+
+      .follower-info {
+        font-weight: 600;
       }
     }
   }
@@ -79,9 +89,19 @@
       align-items: center;
       font-size: 12px;
 
+      .recommendation-color {
+        color: gray;
+      }
+
       .see-all {
         font-weight: 600;
         font-size: 12px;
+      }
+    }
+
+    .recommendation-wrapper {
+      .followe-recommendation {
+        font-weight: 600;
       }
 
       .recommendation-color {

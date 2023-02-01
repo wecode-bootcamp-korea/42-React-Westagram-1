@@ -1,9 +1,11 @@
 .feed {
   display: flex;
-  justify-content: center;
-  border: 1px solid #dadada;
-  background-color: #fff;
+  flex-direction: column;
 
+  article {
+    background-color: #fff;
+    border: 1px solid #dadada;
+  }
   .from-wrapper {
     margin: 5px;
 
@@ -24,6 +26,7 @@
     .user-proflie {
       display: flex;
       align-items: center;
+      font-weight: 600;
 
       .profile {
         width: 30px;
@@ -41,7 +44,7 @@
 
   .feed-photo1 {
     width: 400px;
-    height: 400px;
+    height: 440px;
   }
 
   .feed-icon {
@@ -49,25 +52,25 @@
     margin: 10px;
 
     .heart-icon {
-      width: 23px;
-      height: 21px;
+      width: 20px;
+      height: 20px;
       margin-right: 10px;
     }
 
     .comment-icon {
-      width: 19px;
-      height: 19px;
+      width: 18px;
+      height: 18px;
       margin-right: 10px;
     }
 
     .upload-icon {
-      width: 18px;
-      height: 18px;
+      width: 17px;
+      height: 17px;
     }
 
     .bookmark-icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       margin-left: 280px;
     }
   }
@@ -81,6 +84,7 @@
     .follower-info {
       display: flex;
       align-items: center;
+      font-weight: 600;
 
       .follower-photo {
         width: 20px;
@@ -102,6 +106,9 @@
     .feed-contents {
       display: flex;
 
+      .user-proflie {
+        font-weight: 600;
+      }
       .contents {
         width: 120px;
         margin-left: 5px;

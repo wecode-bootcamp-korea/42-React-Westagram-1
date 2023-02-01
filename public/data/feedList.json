@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "userProfile": "./images/soomin/profile.jpg",
+    "userId": "ggangage",
+    "feedPhoto": "./images/soomin/feed-photo.jpeg",
+    "followerProfile": "./images/soomin/follower-profile1.jpeg",
+    "likesNumber": "여러 명",
+    "followerId": "tkaruqtkf",
+    "comment": "크리스마스 좋아 ! 🎅🏻 케이크 맛있겠다 !",
+    "commentContens": "🍰",
+    "postTime": "26분 전"
+  },
+  {
+    "id": 2,
+    "userProfile": "./images/soomin/profile1.jpeg",
+    "userId": "tkfkdgo",
+    "feedPhoto": "./images/soomin/feed-photo1.jpeg",
+    "followerProfile": "./images/soomin/follower-profile2.jpeg",
+    "likesNumber": "30명",
+    "followerId": "gkgk_a",
+    "comment": "슝슝😍",
+    "commentContens": "⛸",
+    "postTime": "1시간 전"
+  },
+  {
+    "id": 3,
+    "userProfile": "./images/soomin/profile2.jpeg",
+    "userId": "qksksk",
+    "feedPhoto": "./images/soomin/feed-photo2.jpeg",
+    "followerProfile": "./images/soomin/follower-profile3.jpeg",
+    "likesNumber": "15명",
+    "followerId": "ghghglgl_dd",
+    "comment": "이겼다!!!",
+    "commentContens": "골~~~⚽️",
+    "postTime": "3시간 전"
+  }
+]
