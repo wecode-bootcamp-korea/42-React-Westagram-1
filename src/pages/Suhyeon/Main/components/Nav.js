@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProfilePopUp from './ProfilePopUp';
 import './Nav.scss';
@@ -6,12 +6,22 @@ import './Nav.scss';
 function Nav() {
   const [suggestionsLists, setSuggestionsLists] = useState([]);
   const [userInput, setUserInput] = useState('');
-  const [isPopUp, setIsPopUp] = useState(false);
+  const [isPopUp, setPopUp] = useState(false);
+  const modalEl = useRef();
+  const iconEl = useRef();
 
-  const handlePopUp = () => {
-    return setIsPopUp(!isPopUp);
+  const handleClickOutside = e => {
+    if (
+      isPopUp &&
+      !iconEl.current.contains(e.target) &&
+      !modalEl.current.contains(e.target)
+    )
+      setPopUp(false);
   };
 
+  const onPopUp = () => {
+    setPopUp(isPopUp => !isPopUp);
+  };
   const navigate = useNavigate();
 
   const goToLogin = () => {
@@ -19,6 +29,13 @@ function Nav() {
   };
 
   const onUserInput = event => setUserInput(event.target.value);
+
+  useEffect(() => {
+    if (isPopUp) document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
 
   useEffect(() => {
     fetch('/data/suggestionsData.json')
@@ -60,6 +77,7 @@ function Nav() {
             onChange={onUserInput}
           />
           <div
+            ref={modalEl}
             className={`suggestions_container ${userInput ? 'is_active' : ''}`}
           >
             <ul className="suggestions_lists">
@@ -100,7 +118,8 @@ function Nav() {
             alt="uesrIcon"
             className="userIcon icons"
             src="/images/suhyeonImages/user.png"
-            onClick={handlePopUp}
+            onClick={onPopUp}
+            ref={iconEl}
           />
         </div>
       </div>

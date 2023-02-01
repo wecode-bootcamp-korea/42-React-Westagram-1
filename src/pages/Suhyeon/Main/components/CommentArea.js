@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import CommentBox from './CommentBox';
+import './CommentArea.scss';
 
 function CommentArea() {
   const [inputValue, setInputValue] = useState('');
@@ -10,10 +11,12 @@ function CommentArea() {
 
   const onInputComments = event => {
     setInputValue(event.target.value);
-    inputValue.length > 0 ? setBtnState(false) : setBtnState(true);
-    inputValue.length > 0
-      ? setBtnColor('btn_abled')
-      : setBtnState('btn_disabled');
+    event.target.value
+      ? setBtnState(btnState => false)
+      : setBtnState(bbtnState => true);
+    event.target.value
+      ? setBtnColor(btnColor => 'btn_abled')
+      : setBtnColor(btnColor => 'btn_disabled');
   };
 
   const addReply = () => {
@@ -22,7 +25,7 @@ function CommentArea() {
       { id: comments.length, text: inputValue },
     ]);
 
-    setInputValue('');
+    setInputValue(inputValue => '');
   };
 
   const onDelete = id => {
@@ -62,13 +65,14 @@ function CommentArea() {
           onChange={onInputComments}
         />
         <input hidden="hidden" className="hiddenInput" />
-        <input
+        <button
           type="button"
           className={btnColor}
-          value="게시"
           disabled={btnState}
           onClick={addReply}
-        />
+        >
+          게시
+        </button>
       </form>
     </>
   );
