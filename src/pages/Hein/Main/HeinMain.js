@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import HeinMainFeed from './HeinMainFeed';
 import '../../Hein/Main/HeinMain.scss';
 import '../../../styles/common.scss';
-import Comment from '../../../components/Comment';
 
 function NavContainer() {
   return (
@@ -55,140 +55,19 @@ function NavContainer() {
 }
 
 function MainFeed() {
-  const [commentList, setCommentList] = useState([
-    {
-      commentItem: '나를 두고가다니..👊!! 가만두지 않겠다옹!!👿',
-    },
-  ]);
+  const [mainFeedList, setMainFeedList] = useState([]);
 
-  const [comment, setComment] = useState('');
-
-  const saveComment = () => {
-    setCommentList([...commentList, { commentItem: comment }]);
-    setComment('');
-  };
-
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(response => response.json())
+      .then(data => setMainFeedList(data));
+  }, []);
   return (
     <main>
       <div className="mainFeed">
-        <article>
-          <header>
-            <div className="profileOfArticle">
-              <img
-                className="mProfilePic"
-                src="/images/heinImages/heinProfile.jpeg"
-                alt="프로필사진"
-              />
-              <span className="boldPoint">understand_iin</span>
-            </div>
-            <img
-              class="moreInfo"
-              src="https://cdn-icons-png.flaticon.com/512/8638/8638553.png"
-              alt="더보기"
-            />
-          </header>
-
-          <img
-            className="mainIMG"
-            src="/images/heinImages/feed.jpeg"
-            alt="피드사진"
-          />
-
-          <div class="feedIcons">
-            <ul>
-              <li>
-                <a href="#none">
-                  <img
-                    className="iconPress"
-                    src="https://cdn-icons-png.flaticon.com/512/138/138533.png"
-                    alt="하트"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#none">
-                  <img
-                    className="iconPress"
-                    src="https://cdn-icons-png.flaticon.com/512/5948/5948565.png"
-                    alt="말풍선"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#none">
-                  <img
-                    className="iconPress"
-                    src="https://cdn-icons-png.flaticon.com/512/786/786205.png"
-                    alt="dm보내기"
-                  />
-                </a>
-              </li>
-            </ul>
-            <img
-              className="iconPress"
-              src="https://cdn-icons-png.flaticon.com/512/5662/5662990.png"
-              alt="북마크"
-            />
-          </div>
-
-          <div className="reaction">
-            <div className="likedPP">
-              <img
-                className="profilePicR"
-                src="/images/heinImages/mingGu.jpeg"
-                alt="좋아요한사람"
-              />
-              <p>
-                <span className="boldPoint">MingGu</span>님
-                <span className="boldPoint">외 616명</span>이 좋아합니다
-              </p>
-            </div>
-
-            <div className="description">
-              <p className="descriptionText">
-                <span className="boldPoint">understand_iin</span> 엄빠랑
-                보라카이 다녀왔당 &#127965; <br />
-                아직 사람은 많이 없지만 코로나때 잠시 입국 금지였어서 그런지
-                바다도 아주 맑고 예쁘고..&#127807; <br />
-                역시 노을맛집은 필리핀이지 &#128293; &#128293; &#128293; <br />
-                &#128150; 다음에는 형뉴랑도 놀러와야겠당 히히 &#128131;&#128150;
-              </p>
-            </div>
-
-            <div className="commentSection">
-              <ul className="comments">
-                {commentList.map((obj, id) => (
-                  <Comment data={obj} key={id} />
-                ))}
-              </ul>
-            </div>
-            <span className="commentTime">16분 전</span>
-          </div>
-
-          <div className="putComment">
-            <input
-              onChange={e => {
-                setComment(e.target.value);
-              }}
-              className="inputComment"
-              type="text"
-              value={comment}
-              placeholder="댓글 달기..."
-              onKeyPress={e => {
-                if (e.key === 'Enter') {
-                  saveComment();
-                }
-              }}
-            />
-            <button
-              className="submitComment"
-              type="submit"
-              onClick={saveComment}
-            >
-              게시
-            </button>
-          </div>
-        </article>
+        {mainFeedList.map(feed => {
+          return <HeinMainFeed key={feed.id} feed={feed} />;
+        })}
       </div>
 
       <div className="mainRight">

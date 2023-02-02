@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "moreInfo": "https://cdn-icons-png.flaticon.com/512/8638/8638553.png",
+    "userId": "understand_inn",
+    "userPic": "/images/heinImages/heinProfile.jpeg",
+    "feedPic": "/images/heinImages/feed.jpeg",
+    "likedPPic": "/images/heinImages/mingGu.jpeg",
+    "likedPP": "MingGu",
+    "likedNum": "외 616명",
+    "desText": "엄빠랑 보라카이 다녀왔당 🏝 아직 사람은 많이 없지만 코로나때 잠시 입국 금지였어서 그런지 바다도 아주 맑고 예쁘고🙈 역시 노을과 바다 맛집은 필리핀이지 🔥🔥🔥 담엔 내 짝꿍이랑도  와야겠당💖",
+    "commentId": "MingGu",
+    "comment": "나를 두고가다니..👊!! 가만두지 않겠다옹!!👿",
+    "isLiked": false
+  },
+  {
+    "id": 2,
+    "moreInfo": "https://cdn-icons-png.flaticon.com/512/8638/8638553.png",
+    "userId": "MingGu",
+    "userPic": "/images/heinImages/mingGu.jpeg",
+    "feedPic": "/images/feed2.jpg",
+    "likedPPic": "/images/heinImages/heinProfile.jpeg",
+    "likedPP": "understand_inn",
+    "likedNum": "외 4,680명",
+    "desText": "집사를 몰래 쳐다보다가..😒도촬당했다옹.. 오늘도 빛나는 나의 치즈 터-ㄹ💛🧡",
+    "commentId": "understand_inn",
+    "comment": "울 밍구 귀여어🐯",
+    "isLiked": false
+  },
+  {
+    "id": 3,
+    "moreInfo": "https://cdn-icons-png.flaticon.com/512/8638/8638553.png",
+    "userId": "understand_inn",
+    "userPic": "/images/heinImages/heinProfile.jpeg",
+    "feedPic": "/images/feed3.jpg",
+    "likedPPic": "/images/heinImages/hyungyoo.jpeg",
+    "likedPP": "Hyung_yoo",
+    "likedNum": "외 여러명",
+    "desText": "2022.10.08 오픈했던 Accor 브랜드 호텔🏨 좋은 경험이었다! 👀 좋은인연들과 함께 하다가 이제 새로운 도전 하러 wecode로 슝슝-🎶 보구밍 다들🙈"
+  },
+  {
+    "id": 4,
+    "moreInfo": "https://cdn-icons-png.flaticon.com/512/8638/8638553.png",
+    "userId": "Hayley_trip",
+    "userPic": "/images/heinImages/userPic.jpg",
+    "feedPic": "/images/feed4.jpg",
+    "likedPPic": "https://images.unsplash.com/photo-1671742466125-076b52562e77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "likedPP": "Diseny_Land",
+    "likedNum": "외 여러명",
+    "desText": "제주도 같지만?!🤧  사실은 경상남도,,카페 감나무 🍊인데 귤나무 같았다👀 날씨도 좋았고 다~좋았당!! #카페추천 #추천 #여행 #국내여행 #날씨좋음 #좋아요"
+  },
+  {
+    "id": 5,
+    "moreInfo": "https://cdn-icons-png.flaticon.com/512/8638/8638553.png",
+    "userId": "Hyung_yoo",
+    "userPic": "/images/heinImages/hyungyoo.jpeg",
+    "feedPic": "/images/feed5.jpg",
+    "likedPPic": "/images/heinImages/heinProfile.jpeg",
+    "likedPP": "understand_inn",
+    "likedNum": "외 여러명",
+    "desText": "2021년의 마지막도 함께 보냈었는데 벌써 2023년이 되었다. 이번해도 잘 부탁해🥰"
+  }
+]
