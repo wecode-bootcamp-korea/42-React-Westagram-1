@@ -1,0 +1,149 @@
+.main-right {
+  width: 225px;
+  margin-left: 30px;
+
+  .wecode {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    .wecode-follower-profile {
+      display: flex;
+
+      .wecode-profile {
+        width: 30px;
+        height: 30px;
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+    }
+
+    .color-gray {
+      color: gray;
+    }
+  }
+
+  .story-box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+  }
+
+  .color-gray {
+    color: gray;
+  }
+
+  .followers-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    .see-all {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .follower-story-box {
+    height: 80px;
+    white-space: nowrap;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      font-size: 12px;
+
+      .follower-profile {
+        width: 20px;
+        height: 20px;
+        border-radius: 70%;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+
+      .follower-info {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .recommendation-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadada;
+    background-color: #fff;
+
+    .recommendation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+
+      .recommendation-color {
+        color: gray;
+      }
+
+      .see-all {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+
+    .recommendation-wrapper {
+      .followe-recommendation {
+        font-weight: 600;
+      }
+
+      .recommendation-color {
+        color: gray;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 140px;
+        font-size: 12px;
+      }
+    }
+
+    .follower-box {
+      .profile-wrapper {
+        list-style: none;
+
+        .follower-profile-wrapper {
+          display: flex;
+          align-items: center;
+          margin-top: 5px;
+          font-size: 12px;
+
+          .follower-profile {
+            width: 20px;
+            height: 20px;
+            border-radius: 70%;
+            overflow: hidden;
+            margin-right: 10px;
+          }
+          .recommendation-color {
+            color: gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 140px;
+          }
+          .button-color {
+            font-size: 12px;
+            color: rgb(21, 95, 233);
+          }
+        }
+      }
+    }
+  }
+}

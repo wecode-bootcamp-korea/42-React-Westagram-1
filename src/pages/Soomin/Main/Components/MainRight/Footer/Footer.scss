@@ -1,0 +1,22 @@
+@mixin footer-color {
+  color: gray;
+  font-size: 12px;
+}
+
+.info {
+  @include footer-color;
+  display: flex;
+  flex-wrap: wrap;
+
+  .info-list:not(:last-child) {
+    &::after {
+      content: '\00B7';
+      margin: 3px;
+    }
+  }
+}
+
+.address {
+  margin-top: 10px;
+  @include footer-color;
+}

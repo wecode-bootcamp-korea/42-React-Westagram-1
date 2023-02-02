@@ -1,0 +1,72 @@
+.nav {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 50px;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      font-family: 'Lobster', cursive;
+
+      .logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+
+    .searchbar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+
+      .search::placeholder {
+        text-align: center;
+      }
+      .fa-magnifying-glass {
+        position: absolute;
+        left: 90px;
+        color: gray;
+      }
+
+      .search {
+        width: 240px;
+        height: 25px;
+        padding: 10px;
+        border: 1px solid rgb(240, 240, 240);
+        border-radius: 5px;
+        background-color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .notice {
+      .exploration {
+        width: 25px;
+        margin-right: 20px;
+      }
+
+      .heart {
+        width: 25px;
+        margin-right: 20px;
+      }
+
+      .mypage {
+        width: 21px;
+      }
+    }
+  }
+}
