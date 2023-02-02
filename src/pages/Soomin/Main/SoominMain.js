@@ -1,6 +1,6 @@
-import Nav from './Nav/Nav';
-import Feed from './Feed/Feed';
-import MainRight from './MainRight/MainRight';
+import Nav from './Components/Nav/Nav';
+import Feed from './Components/Feed/Feed';
+import MainRight from './Components/MainRight/MainRight';
 import './SoominMain.scss';
 
 export default function SoominMain() {

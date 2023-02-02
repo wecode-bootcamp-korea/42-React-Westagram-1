@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LikeButton from '../LikeButton/LikeButton';
 import './Comment.scss';
 
 export default function Comment({ commentArray, commentContens, followerId }) {
+  const [like, setLike] = useState(false);
+
+  const toggleLike = event => {
+    setLike(!like);
+  };
   return (
     <>
       <span className="contents-box">{followerId}</span>
@@ -12,13 +18,7 @@ export default function Comment({ commentArray, commentContens, followerId }) {
             <span className="contents-box">{followerId}</span>
             <span>{comment}</span>
           </div>
-          <button
-            className="comment-heart"
-            type="button"
-            aria-label="comment-heart"
-          >
-            ♡
-          </button>
+          <LikeButton toggleLike={toggleLike} like={like} />
         </li>
       ))}
     </>

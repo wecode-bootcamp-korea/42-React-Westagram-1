@@ -1,5 +1,5 @@
 import React from 'react';
-import { FOOTER_INFO } from './../../Data';
+import { FOOTER_INFO } from '../../../Data';
 import './Footer.scss';
 
 export default function Footer() {
