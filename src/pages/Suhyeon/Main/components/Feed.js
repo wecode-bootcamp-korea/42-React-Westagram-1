@@ -17,8 +17,8 @@ function Feed() {
       {feedLists.map((feedList, id) => {
         return (
           <>
-            <FeedContext key={id} feedLists={feedLists} feedList={feedList} />
-            <CommentArea />
+            <FeedContext key={id} feedList={feedList} />
+            <CommentArea key={id + 'comment'} />
           </>
         );
       })}

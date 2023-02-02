@@ -13,7 +13,7 @@ function CommentArea() {
     setInputValue(event.target.value);
     event.target.value
       ? setBtnState(btnState => false)
-      : setBtnState(bbtnState => true);
+      : setBtnState(btnState => true);
     event.target.value
       ? setBtnColor(btnColor => 'btn_abled')
       : setBtnColor(btnColor => 'btn_disabled');

@@ -1,23 +1,30 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ProfilePopUp from './ProfilePopUp';
 import './Nav.scss';
 
 function Nav() {
   const [suggestionsLists, setSuggestionsLists] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isPopUp, setPopUp] = useState(false);
-  const modalEl = useRef();
+  const modalEl = useRef(null);
   const iconEl = useRef();
 
-  const handleClickOutside = e => {
+  const handleClickOutside = event => {
     if (
       isPopUp &&
-      !iconEl.current.contains(e.target) &&
-      !modalEl.current.contains(e.target)
-    )
-      setPopUp(false);
+      !iconEl.current.contains(event.target) &&
+      !modalEl.current.contains(event.target)
+    ) {
+      return setPopUp(false);
+    }
   };
+
+  useEffect(() => {
+    window.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      window.removeEventListener('mousedown', handleClickOutside);
+    };
+  });
 
   const onPopUp = () => {
     setPopUp(isPopUp => !isPopUp);
@@ -29,13 +36,6 @@ function Nav() {
   };
 
   const onUserInput = event => setUserInput(event.target.value);
-
-  useEffect(() => {
-    if (isPopUp) document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  });
 
   useEffect(() => {
     fetch('/data/suggestionsData.json')
@@ -77,7 +77,6 @@ function Nav() {
             onChange={onUserInput}
           />
           <div
-            ref={modalEl}
             className={`suggestions_container ${userInput ? 'is_active' : ''}`}
           >
             <ul className="suggestions_lists">
@@ -102,7 +101,38 @@ function Nav() {
             </ul>
           </div>
         </div>
-        {isPopUp ? <ProfilePopUp /> : ''}
+        {isPopUp ? (
+          <div ref={modalEl} className="profilePopUp">
+            <ul className="profileList">
+              <li className="profileMenu">
+                <img
+                  src="/images/suhyeonimages/user.png"
+                  alt="icon"
+                  className="profileIcon"
+                />
+                <span className="profileText">프로필</span>
+              </li>
+              <li className="profileMenu">
+                <img
+                  src="/images/suhyeonimages/bookmark.png"
+                  alt="icon"
+                  className="profileIcon"
+                />
+                <span className="profileText">북마크</span>
+              </li>
+              <li className="profileMenu">
+                <img
+                  src="/images/suhyeonimages/settings.png"
+                  alt="icon"
+                  className="profileIcon"
+                />
+                <span className="profileText">설정</span>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          ''
+        )}
         <div className="navRight">
           <img
             alt="compassIcon"
