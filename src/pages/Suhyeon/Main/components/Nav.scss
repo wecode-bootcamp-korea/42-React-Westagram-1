@@ -1,0 +1,162 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.navWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  background-color: white;
+  height: 60px;
+
+  .icons {
+    width: 30px;
+    margin-left: 15px;
+  }
+
+  .navLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .instagramLogoSuhyeon {
+      width: 50px;
+      border-right: 2px solid #464646;
+      padding-right: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .instagramTitle {
+      font-size: 30px;
+      font-family: 'Lobster', cursive;
+      color: black;
+      margin-left: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navCenter {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .searchBar {
+      width: 280px;
+      height: 30px;
+      border-radius: 3px;
+      border: 1px solid lightgray;
+      text-align: center;
+      color: gray;
+    }
+
+    .searchIcon {
+      width: 15px;
+      position: absolute;
+      left: 70px;
+    }
+
+    .suggestions_container {
+      display: none;
+      width: 280px;
+      background-color: white;
+      position: fixed;
+      top: 45px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.2);
+
+      &.is_active {
+        display: block;
+      }
+
+      .suggestions_lists {
+        padding: 20px;
+
+        .suggestions_list {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 50px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid lightgray;
+
+          .suggestions_icon {
+            position: relative;
+            width: 35px;
+            height: 35px;
+
+            border: 2px solid transparent;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 0px;
+
+            .suggestions_icon_img {
+              width: 100%;
+            }
+          }
+          .suggestions_id {
+            font-weight: 700;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .navRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profilePopUp {
+    position: fixed;
+    top: 50px;
+    right: 210px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.2);
+    z-index: 10;
+
+    .profileList {
+      font-size: 15px;
+      margin: 15px;
+
+      .profileMenu {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        .profileIcon {
+          position: relative;
+          width: 20px;
+          opacity: 80%;
+        }
+
+        .profileText {
+          margin-left: 10px;
+          font-size: 15px;
+        }
+
+        .profile_logOut {
+          border-top: 1px solid lightgray;
+          padding-top: 15px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}

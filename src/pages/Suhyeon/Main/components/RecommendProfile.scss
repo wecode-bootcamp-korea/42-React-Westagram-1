@@ -1,0 +1,54 @@
+$context-size: 15px;
+
+.recommendProfile{
+
+  .recommendProfileWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+  
+  
+    .recommendIcon{
+      position: relative;
+      width: 35px;
+      height: 35px;
+      margin: 10px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      overflow:hidden;
+      margin-left:0px;
+  
+      .recommendIcon_img_1{
+        width: 100%;
+      }
+    }
+  
+    .recommendInfo{
+      display: flex;
+      flex-direction: column;
+      font-size: $context-size;
+      margin-left: 0px;
+  
+      .recommendId{
+        font-weight: 800;
+      }
+      
+      .recommendPeople{
+        color: gray;
+      }
+    }
+  
+  
+    .recommendFollow{
+      margin-left: auto;
+      font-size: $context-size;
+      font-weight: 700;
+      color: cornflowerblue;
+      border-width: 0px;
+      background-color: transparent;
+    }
+  
+  }
+  
+}

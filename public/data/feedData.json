@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "authorProfileImg": "/images/suhyeonImages/authorProfileImg.png",
+    "authorId": "blushcats",
+    "articleImg": "/images/suhyeonImages/articleImg.png",
+    "statusProfileImg": "/images/suhyeonImages/wecode.png",
+    "statusProfileId": "aineworld",
+    "postText": "위워크에서 진행한 베이킹 클래스 넘나 재밌었다!",
+    "postTime": "42분 전"
+  },
+  {
+    "id": "2",
+    "authorProfileImg": "/images/suhyeonImages/profileImg_5.png",
+    "authorId": "lara.lina",
+    "articleImg": "/images/suhyeonImages/articleImg2.png",
+    "statusProfileImg": "/images/suhyeonImages/wecode.png",
+    "statusProfileId": "joojoo98",
+    "postText": "아주 오래 전에 찍은 사진",
+    "postTime": "30분 전"
+  },
+  {
+    "id": "3",
+    "authorProfileImg": "/images/suhyeonImages/profileImg_3.png",
+    "authorId": "dkanrjsk",
+    "articleImg": "/images/suhyeonImages/articleImg3.png",
+    "statusProfileImg": "/images/suhyeonImages/wecode.png",
+    "statusProfileId": "lara.lina",
+    "postText": "우리집 고양이는 복슬 고양이",
+    "postTime": "2시간 전"
+  }
+]

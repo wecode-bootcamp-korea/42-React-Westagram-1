@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "userId": "lara_lina",
+    "userImg": "/images/suhyeonImages/profileImg_1.png"
+  },
+  {
+    "id": "2",
+    "userId": "lilica",
+    "userImg": "/images/suhyeonImages/profileImg_2.png"
+  },
+  {
+    "id": "3",
+    "userId": "gonia123",
+    "userImg": "/images/suhyeonImages/profileImg_3.png"
+  },
+  {
+    "id": "4",
+    "userId": "joojoogupal",
+    "userImg": "/images/suhyeonImages/profileImg_4.png"
+  },
+  {
+    "id": "5",
+    "userId": "rampart",
+    "userImg": "/images/suhyeonImages/profileImg_5.png"
+  },
+  {
+    "id": "6",
+    "userId": "eat_happy_eat",
+    "userImg": "/images/suhyeonImages/profileImg_1.png"
+  },
+  {
+    "id": "7",
+    "userId": "laralina",
+    "userImg": "/images/suhyeonImages/wecode.png"
+  }
+]
