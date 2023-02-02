@@ -23,3 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+
+# hein imgs
+feed2.jpg
+feed3.jpg
+feed4.jpg
+feed5.jpg
+userPic.jpg

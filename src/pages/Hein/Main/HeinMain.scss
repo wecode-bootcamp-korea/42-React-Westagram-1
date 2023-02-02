@@ -1,0 +1,383 @@
+@mixin navIconSort {
+  width: 30px;
+  height: 30px;
+}
+
+@mixin ulSort {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin ProfilePicSort {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+} //이거 메인 시작하는거 위로 옮기기
+
+@mixin descriptionSort {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  height: 35px;
+  width: 100%;
+  padding: 20px 0;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+
+  .nav1 {
+    display: flex;
+    height: 30px;
+
+    .logo {
+      @include navIconSort;
+      margin: 2px 10px;
+    }
+
+    .Westagram {
+      display: flex;
+      padding-left: 10px;
+      border-left: 1.5px solid black;
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  .inputSearch {
+    width: 270px;
+    height: 23px;
+    padding: 5px;
+    box-sizing: content-box;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/868/868282.png);
+    background-position: 38%center;
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-color: #fafafa;
+    text-align: center;
+    font-size: 15px;
+
+    &:focus::placeholder {
+      text-align: start;
+    }
+
+    &::placeholder {
+      &:not(:focus) {
+        font-weight: 200;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      text-align: start;
+      background-image: none;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+  .nav2 {
+    .listWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .searchIcon,
+    .heartIcon,
+    .myPageIcon {
+      width: 35px;
+      height: 35px;
+      padding-left: 20px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 30px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border: 1px solid #dbdbdb;
+
+    .profileOfArticle {
+      display: flex;
+      align-items: center;
+      .boldPoint {
+        font-size: 18px;
+      }
+
+      .mProfilePic {
+        @include ProfilePicSort;
+        margin-right: 15px;
+      }
+    }
+
+    .moreInfo {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+    }
+  }
+
+  .mainIMG {
+    width: 700px;
+    height: auto;
+    border: 1px solid #dbdbdb;
+  }
+
+  .feedBody {
+    padding: 0 0 7px 15px;
+    border: 1px solid #dbdbdb;
+  }
+
+  .feedIcons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 8px 0;
+
+    ul {
+      display: flex;
+      .iconPress {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .reaction {
+    margin-left: 15px;
+    margin-bottom: 5px;
+
+    .likedPP {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      margin-left: -15px;
+
+      .profilePicR {
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        border-radius: 100%;
+        border: 1px solid #dbdbdb;
+      }
+    }
+    .commentTime {
+      font-size: 17px;
+    }
+  }
+  .descriptopnText {
+    @include descriptionSort;
+  }
+  .commentSection {
+    padding-top: 5px;
+  }
+
+  .putComment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border: 1px solid #dbdbdb;
+
+    .inputComment {
+      width: 610px;
+      border: none;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+      &:focus {
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+    .submitComment {
+      width: 50px;
+      height: 50px;
+      color: #dbdbdb;
+      background-color: transparent;
+      font-size: 16px;
+    }
+  }
+}
+
+.mainRight {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+  .mainTopWrap {
+    display: flex;
+    align-items: center;
+  }
+}
+.subProfile {
+  width: 40px;
+}
+
+.storyList,
+.recommandSection {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainFeed {
+  width: 300px;
+  margin: 0 70px;
+}
+
+article,
+.storySection,
+.recommandSection {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+}
+
+.storySection {
+  margin-top: 10px;
+}
+
+.StorySectionTop {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.storySection,
+.recommandSection {
+  width: 300px;
+  overflow: hidden;
+}
+
+.mainFeed,
+.mainRight {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 800px;
+  margin: 0 20px 0 70px;
+  border: 1px solid #dbdbdb;
+}
+
+.ProfilePic {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 100%;
+}
+
+.myProfilePic2 {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 50px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+}
+
+.iconPress {
+  width: 30px;
+  height: 30px;
+}
+
+.likedPP {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comments {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  button {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    background-color: transparent;
+    .commentHeart {
+      width: 10px;
+      height: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .commentContext {
+    margin-left: 10px;
+  }
+}
+
+.commentTime {
+  color: gray;
+}
+
+.StorySectionTop,
+.recommandSectionTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.storyList {
+  margin-left: 15px;
+  margin-top: -4px;
+}
+
+.westaScript,
+.subProfile {
+  color: #afafaf;
+  font-size: 14px;
+}
+
+.follow {
+  color: #0995f6;
+  font-weight: 700;
+}
+
+.storyTitle {
+  color: #afafaf;
+  font-weight: 700;
+}
+.storyMore {
+  font-weight: 700;
+}
+
+.westaScript {
+  display: flex;
+  flex-wrap: wrap;
+  width: 285px;
+  margin: 10px 0 0 10px;
+  font-size: 16px;
+}

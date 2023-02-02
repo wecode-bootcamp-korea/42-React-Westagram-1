@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 402px;
+  margin: 200px auto;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+
+  .Westagram2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    font-size: 48px;
+    cursor: pointer;
+
+    a {
+      color: #000000;
+    }
+  }
+}
+
+input {
+  display: block;
+  width: 268px;
+  height: 30px;
+  margin: 0 4px 6px 4px;
+  padding: 2px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+button {
+  width: 274px;
+  height: 32px;
+  margin: 8px 4px;
+  background-color: #4cb5f9;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #b9dffc;
+  }
+}
+
+.forgot {
+  font-size: 12px;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 100px;
+  a {
+    color: #385898;
+  }
+}
+
+a {
+  text-decoration: none;
+}
