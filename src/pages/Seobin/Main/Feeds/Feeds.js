@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import Footer from '../Footer/Footer';
+import React, { useState, useEffect } from 'react';
+import CommentComponent from './Comment/CommentComponent';
 import './Feeds.scss';
 
 const Feeds = () => {
+  // Feed 여러개 구현
+  const [Feeds, setFeeds] = useState([]);
+
+  // 댓글 구현
   const [comment, setComment] = useState('');
-  const hendleComment = event => {
+  const handleComment = event => {
     const { value } = event.target;
     setComment(value);
   };
@@ -15,66 +19,56 @@ const Feeds = () => {
     setCommentArray(result);
     setComment('');
   };
-
+  useEffect(() => {
+    fetch('data/userInfoList.json')
+      .then(response => response.json())
+      .then(result => setFeeds(result));
+  }, []);
   return (
     <div className="feeds">
       <article>
-        <div className="profileBox">
-          <div className="postProfile">
-            <img
-              className="feedsProfileImg"
-              src="images/lukas.jpg"
-              rel="sorry"
-            />
-            <div className="feedsProfileText">
-              <p>wecode_bootcamp</p>
-              <span>WeCode - 위코드</span>
-            </div>
-          </div>
-          <div className="feedsLike">
-            <img className="feedsImg" src="images/duncan.jpg" rel="sorry" />
-            <div className="feedsicon">
-              <div className="feedslowericon">
-                <i className="fas fa-heart heartColor" />
-                <i className="far fa-comment" />
+        {Feeds.map(userInfo => {
+          return (
+            <>
+              <div className="profile-box">
+                <div className="profile">
+                  <img
+                    className="airplane-img"
+                    src="images/lukas.jpg"
+                    rel="sorry"
+                    width="500px"
+                  />
+                  <p>wecode_bootcamp</p>
+                  <span>WeCode - 위코드</span>
+                </div>
               </div>
-              <div>
-                <i className="far fa-bookmark" />
+              <div className="like">
+                <img className="feed-img" src="images/duncan.jpg" rel="sorry" />
+                <div className="icon-lower">
+                  <div className="icon-lower__icon">
+                    <i className="fas fa-heart heartColor" />
+                    <i className="far fa-comment" />
+                  </div>
+                  <div>
+                    <i className="far fa-bookmark" />
+                  </div>
+                </div>
+                <div className="profile-like">
+                  <img className="circle" src="images/lukas.jpg" width="70px" />
+                  <span>{userInfo.name}님 외 4명이 좋아합니다</span>
+                </div>
               </div>
-            </div>
-            <div className="feedsProfileLike">
-              <img
-                className="feedsCircle"
-                src="images/lukas.jpg"
-                width="70px"
+              <CommentComponent
+                handleComment={handleComment}
+                userInfo={userInfo}
+                commentArray={commentArray}
+                comment={comment}
+                eventComment={eventComment}
               />
-              <span>Icebear님 외 4명이 좋아합니다</span>
-            </div>
-          </div>
-          <div className="bootcampDescribed">
-            <span>wecode_bootcamp</span>
-            <span>
-              "위코드는 단순 교육업체가 아닌 개발자 커뮤니티입니다... 더보기
-            </span>
-          </div>
-          <ul className="commentUl">
-            {commentArray.map(function (a, i) {
-              return <p>{commentArray[i]}</p>;
-            })}
-          </ul>
-        </div>
-        <input
-          type="text"
-          value={comment}
-          onChange={hendleComment}
-          placeholder="댓글달기"
-          className="addComment"
-        />
-        <button className="commentButton" onClick={eventComment}>
-          게시
-        </button>
+            </>
+          );
+        })}
       </article>
-      <Footer />
     </div>
   );
 };

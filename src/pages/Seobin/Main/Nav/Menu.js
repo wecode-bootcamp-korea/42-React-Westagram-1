@@ -1,7 +1,7 @@
 import React from 'react';
 import './Menu.scss';
 
-const List = () => {
+const menuList = () => {
   return (
     <ul>
       <li>프로필</li>
@@ -14,4 +14,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default menuList;

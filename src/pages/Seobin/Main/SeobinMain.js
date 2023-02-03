@@ -2,7 +2,6 @@ import React from 'react';
 import Feeds from './Feeds/Feeds';
 import Nav from './Nav/Nav';
 import './SeobinMain.scss';
-
 const Home = () => {
   return (
     <main>
