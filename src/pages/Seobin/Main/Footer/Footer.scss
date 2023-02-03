@@ -1,0 +1,12 @@
+.menuList {
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+
+  li {
+    padding-right: 10px;
+    border-right: 2px solid gray;
+    list-style: none;
+    cursor: pointer;
+  }
+}
