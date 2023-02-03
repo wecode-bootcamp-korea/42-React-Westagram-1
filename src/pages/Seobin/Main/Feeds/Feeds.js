@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CommentComponent from './Comment/CommentComponent';
+import Footer from '../Footer/Footer';
 import './Feeds.scss';
 
 const Feeds = () => {
@@ -24,6 +25,7 @@ const Feeds = () => {
       .then(response => response.json())
       .then(result => setFeeds(result));
   }, []);
+
   return (
     <div className="feeds">
       <article>
@@ -58,16 +60,11 @@ const Feeds = () => {
                   <span>{userInfo.name}님 외 4명이 좋아합니다</span>
                 </div>
               </div>
-              <CommentComponent
-                handleComment={handleComment}
-                userInfo={userInfo}
-                commentArray={commentArray}
-                comment={comment}
-                eventComment={eventComment}
-              />
+              <CommentComponent />
             </>
           );
         })}
+        <Footer />
       </article>
     </div>
   );
